@@ -19,7 +19,7 @@ export type BuildArtifactSet = {
 
 export type Stat = "ATK%" | "DEF%" | "HP%" | "Heal%" | "CRIT" | "CRate" | "CDMG" | "EM" | "ER" | "Anemo%" | "Cryo%" | "Dendro%" | "Electro%" | "Geo%" | "Hydro%" | "Pyro%" | "Physical%";
 
-const builds: { [character: string]: Build[] } = {
+export const builds: { [character: string]: Build[] } = {
     Keqing: [
         {
             playstyle: "On-Field Aggrevate DPS",
@@ -211,5 +211,3 @@ const builds: { [character: string]: Build[] } = {
         }
     ]
 }
-
-export default builds;
