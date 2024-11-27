@@ -1,23 +1,22 @@
 import styles from "./page.module.css";
-import { builds } from "./lib/data";
+import { ArtifactSet, builds, groupByArtifact } from "./lib/data";
 import ArtifactBuilds from "./ui/ArtifactBuilds";
 
 export default function Home() {
+    const artifacts = groupByArtifact(builds);
+
     return (
         <div className={styles.page}>
             <main className={styles.main}>
-                {/* Builds: {Object.entries(builds).map(([name, builds]) => `${name} (${builds.length})`).join(", ")}
-                <hr />
-                {Object.entries(characters).map(([name, image]) =>
-                    <div key={name}>{name}: <Image src={image} alt={name} /></div>)}
-                <hr />
-                {Object.entries(artifacts).map(([name, image]) =>
-                    <div key={name}>{name}: <Image src={image} alt={name} /></div>)} */}
-                <ArtifactBuilds
-                    artifactName="Thundering Fury"
-                    characterBuilds={[{
-                        character: "Keqing", build: builds['Keqing']![0]
-                    }]} />
+                <div className={styles.artifact_sets}>
+                    {Object.entries(artifacts).map(([artifactName, characterBuilds]) => (
+                        <ArtifactBuilds
+                            key={artifactName}
+                            artifactName={artifactName as ArtifactSet}
+                            characterBuilds={characterBuilds}
+                        />
+                    ))}
+                </div>
             </main>
         </div>
     );

@@ -1,4 +1,4 @@
-import { ArtifactSet, Character } from ".";
+import { artifactIcons, ArtifactSet, Character } from ".";
 
 export type Build = {
     playstyle: string;
@@ -19,11 +19,40 @@ export type BuildArtifactSet = {
     comment?: string;
 }
 
+export type BuildSpecificSet = Omit<Build, "sets"> & { set: BuildArtifactSet };
+
 export type Stat = "ATK%" | "DEF%" | "HP%" | "Heal%" | "CRIT" | "CRate" | "CDMG" | "EM" | "ER" | "Anemo%" | "Cryo%" | "Dendro%" | "Electro%" | "Geo%" | "Hydro%" | "Pyro%" | "Physical%";
 
-type Builds = {
-    [character in Character]: Build[]
+type Builds = { [character in Character]: Build[] };
+
+type BuildsByArtifact = {
+    [artifact in ArtifactSet]: {
+        character: Character,
+        build: BuildSpecificSet
+    }[]
 };
+
+export function groupByArtifact(builds: Partial<Builds>): BuildsByArtifact {
+    const result: BuildsByArtifact = {} as BuildsByArtifact;
+    for (const artifactName in artifactIcons) {
+        result[artifactName as ArtifactSet] = [];
+    }
+
+    for (const [character, charBuilds] of Object.entries(builds)) {
+        for (const build of charBuilds) {
+            for (const set of build.sets) {
+                result[set.name].push({
+                    character: character as Character,
+                    build: {
+                        ...build,
+                        set: set
+                    }
+                });
+            }
+        }
+    }
+    return result;
+}
 
 // TODO: remove Partial once we have all characters
 export const builds: Partial<Builds> = {
@@ -44,11 +73,6 @@ export const builds: Partial<Builds> = {
                     priority: 1
                 },
                 {
-                    name: "Thundering Fury",
-                    pieces: 2,
-                    priority: 1
-                },
-                {
                     name: "Wanderer's Troupe",
                     pieces: 2,
                     priority: 1
@@ -59,7 +83,7 @@ export const builds: Partial<Builds> = {
                     priority: 1
                 },
                 {
-                    name: "Marechausse Hunter",
+                    name: "Marechaussee Hunter",
                     pieces: 4,
                     priority: 2,
                     comment: "with Furina"
@@ -88,12 +112,12 @@ export const builds: Partial<Builds> = {
                     priority: 0
                 },
                 {
-                    name: "Tenacity of the Millelith",
+                    name: "Tenacity Of The Millelith",
                     pieces: 2,
                     priority: 0
                 },
                 {
-                    name: "Emblem of Severed Fate",
+                    name: "Emblem Of Severed Fate",
                     pieces: 2,
                     priority: 0
                 },
@@ -103,7 +127,7 @@ export const builds: Partial<Builds> = {
                     priority: 0
                 },
                 {
-                    name: "Deepwood memories",
+                    name: "Deepwood Memories",
                     pieces: 4,
                     priority: 0,
                     comment: "Quicken"
@@ -115,7 +139,7 @@ export const builds: Partial<Builds> = {
                     comment: "Quicken"
                 },
                 {
-                    name: "Scroll of the Hero of Cinder City",
+                    name: "Scroll Of The Hero Of Cinder City",
                     pieces: 4,
                     priority: 0,
                     comment: "Quicken"
@@ -146,7 +170,7 @@ export const builds: Partial<Builds> = {
                     priority: 0
                 },
                 {
-                    name: "Emblem of Severed Fate",
+                    name: "Emblem Of Severed Fate",
                     pieces: 2,
                     priority: 0
                 },
@@ -166,7 +190,7 @@ export const builds: Partial<Builds> = {
                     priority: 0
                 },
                 {
-                    name: "Marechausse Hunter",
+                    name: "Marechaussee Hunter",
                     pieces: 4,
                     priority: 1,
                     comment: "with Furina"
@@ -189,7 +213,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/10/Dori-Hyperbloom-Infographic.png",
             sets: [
                 {
-                    name: "Flower of Paradise Lost",
+                    name: "Flower Of Paradise Lost",
                     pieces: 4,
                     priority: 0
                 },

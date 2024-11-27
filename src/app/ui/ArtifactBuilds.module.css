@@ -1,0 +1,22 @@
+.artifact_builds {
+    background: var(--gray-alpha-100);
+    padding: 1em;
+    border-radius: 8px;
+}
+
+.top_row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.character_ions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main_stats > div {
+    display: flex;
+    align-items: center;
+}

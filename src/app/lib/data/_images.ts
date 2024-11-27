@@ -3,7 +3,6 @@
 import ArchaicPetra from '/public/icons/artifacts/Archaic Petra.png';
 import BlizzardStrayer from '/public/icons/artifacts/Blizzard Strayer.png';
 import BloodstainedChivalry from '/public/icons/artifacts/Bloodstained Chivalry.png';
-import Circlet from '/public/icons/artifacts/Circlet.png';
 import CrimsonWitchOfFlames from '/public/icons/artifacts/Crimson Witch Of Flames.png';
 import DeepwoodMemories from '/public/icons/artifacts/Deepwood Memories.png';
 import DesertPavilionChronicle from '/public/icons/artifacts/Desert Pavilion Chronicle.png';
@@ -13,10 +12,10 @@ import FlowerOfParadiseLost from '/public/icons/artifacts/Flower Of Paradise Los
 import FragmentOfHarmonicWhimsy from '/public/icons/artifacts/Fragment Of Harmonic Whimsy.png';
 import GildedDreams from '/public/icons/artifacts/Gilded Dreams.png';
 import GladiatorsFinale from '/public/icons/artifacts/Gladiator\'s Finale.png';
-import Goblet from '/public/icons/artifacts/Goblet.png';
 import GoldenTroupe from '/public/icons/artifacts/Golden Troupe.png';
 import HeartOfDepth from '/public/icons/artifacts/Heart Of Depth.png';
 import HuskOfOpulentDreams from '/public/icons/artifacts/Husk Of Opulent Dreams.png';
+import Instructor from '/public/icons/artifacts/Instructor.webp';
 import Lavawalker from '/public/icons/artifacts/Lavawalker.png';
 import MaidenBeloved from '/public/icons/artifacts/Maiden Beloved.png';
 import MarechausseeHunter from '/public/icons/artifacts/Marechaussee Hunter.png';
@@ -27,7 +26,6 @@ import ObsidianCodex from '/public/icons/artifacts/Obsidian Codex.png';
 import OceanHuedClam from '/public/icons/artifacts/Ocean-Hued Clam.png';
 import PaleFlame from '/public/icons/artifacts/Pale Flame.png';
 import RetracingBolide from '/public/icons/artifacts/Retracing Bolide.png';
-import Sands from '/public/icons/artifacts/Sands.png';
 import ScrollOfTheHeroOfCinderCity from '/public/icons/artifacts/Scroll Of The Hero Of Cinder City.png';
 import ShimenawasReminiscence from '/public/icons/artifacts/Shimenawa\'s Reminiscence.png';
 import SongOfDaysPast from '/public/icons/artifacts/Song Of Days Past.png';
@@ -43,7 +41,6 @@ export const artifacts = {
   ['Archaic Petra']: ArchaicPetra,
   ['Blizzard Strayer']: BlizzardStrayer,
   ['Bloodstained Chivalry']: BloodstainedChivalry,
-  ['Circlet']: Circlet,
   ['Crimson Witch Of Flames']: CrimsonWitchOfFlames,
   ['Deepwood Memories']: DeepwoodMemories,
   ['Desert Pavilion Chronicle']: DesertPavilionChronicle,
@@ -53,10 +50,10 @@ export const artifacts = {
   ['Fragment Of Harmonic Whimsy']: FragmentOfHarmonicWhimsy,
   ['Gilded Dreams']: GildedDreams,
   ['Gladiator\'s Finale']: GladiatorsFinale,
-  ['Goblet']: Goblet,
   ['Golden Troupe']: GoldenTroupe,
   ['Heart Of Depth']: HeartOfDepth,
   ['Husk Of Opulent Dreams']: HuskOfOpulentDreams,
+  ['Instructor']: Instructor,
   ['Lavawalker']: Lavawalker,
   ['Maiden Beloved']: MaidenBeloved,
   ['Marechaussee Hunter']: MarechausseeHunter,
@@ -67,7 +64,6 @@ export const artifacts = {
   ['Ocean-Hued Clam']: OceanHuedClam,
   ['Pale Flame']: PaleFlame,
   ['Retracing Bolide']: RetracingBolide,
-  ['Sands']: Sands,
   ['Scroll Of The Hero Of Cinder City']: ScrollOfTheHeroOfCinderCity,
   ['Shimenawa\'s Reminiscence']: ShimenawasReminiscence,
   ['Song Of Days Past']: SongOfDaysPast,
@@ -97,6 +93,7 @@ import Chiori from '/public/icons/characters/Chiori.png';
 import Chongyun from '/public/icons/characters/Chongyun.png';
 import Clorinde from '/public/icons/characters/Clorinde.png';
 import Cyno from '/public/icons/characters/Cyno.png';
+import Dehya from '/public/icons/characters/Dehya.png';
 import Diluc from '/public/icons/characters/Diluc.png';
 import Dori from '/public/icons/characters/Dori.png';
 import Emilie from '/public/icons/characters/Emilie.png';
@@ -126,7 +123,6 @@ import Layla from '/public/icons/characters/Layla.png';
 import Lisa from '/public/icons/characters/Lisa.png';
 import Lynette from '/public/icons/characters/Lynette.png';
 import Lyney from '/public/icons/characters/Lyney.png';
-import Misc from '/public/icons/characters/Misc.png';
 import Mona from '/public/icons/characters/Mona.png';
 import Mualani from '/public/icons/characters/Mualani.png';
 import Nahida from '/public/icons/characters/Nahida.png';
@@ -135,7 +131,6 @@ import Neuvilette from '/public/icons/characters/Neuvilette.png';
 import Nilou from '/public/icons/characters/Nilou.png';
 import Ningguang from '/public/icons/characters/Ningguang.png';
 import Noelle from '/public/icons/characters/Noelle.png';
-import PortraitsDehya1 from '/public/icons/characters/Portraits-Dehya 1.png';
 import Qiqi from '/public/icons/characters/Qiqi.png';
 import RaidenShogun from '/public/icons/characters/Raiden Shogun.png';
 import Razor from '/public/icons/characters/Razor.png';
@@ -178,6 +173,7 @@ export const characters = {
   ['Chongyun']: Chongyun,
   ['Clorinde']: Clorinde,
   ['Cyno']: Cyno,
+  ['Dehya']: Dehya,
   ['Diluc']: Diluc,
   ['Dori']: Dori,
   ['Emilie']: Emilie,
@@ -207,7 +203,6 @@ export const characters = {
   ['Lisa']: Lisa,
   ['Lynette']: Lynette,
   ['Lyney']: Lyney,
-  ['Misc']: Misc,
   ['Mona']: Mona,
   ['Mualani']: Mualani,
   ['Nahida']: Nahida,
@@ -216,7 +211,6 @@ export const characters = {
   ['Nilou']: Nilou,
   ['Ningguang']: Ningguang,
   ['Noelle']: Noelle,
-  ['Portraits-Dehya 1']: PortraitsDehya1,
   ['Qiqi']: Qiqi,
   ['Raiden Shogun']: RaidenShogun,
   ['Razor']: Razor,
