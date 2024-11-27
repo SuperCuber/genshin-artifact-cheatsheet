@@ -1,3 +1,5 @@
+import { ArtifactSet, Character } from ".";
+
 export type Build = {
     playstyle: string;
     infographic: string;
@@ -11,15 +13,20 @@ export type Build = {
 }
 
 export type BuildArtifactSet = {
-    name: string;
-    pieces: number;
+    name: ArtifactSet;
+    pieces: 2 | 4;
     priority: number;
     comment?: string;
 }
 
 export type Stat = "ATK%" | "DEF%" | "HP%" | "Heal%" | "CRIT" | "CRate" | "CDMG" | "EM" | "ER" | "Anemo%" | "Cryo%" | "Dendro%" | "Electro%" | "Geo%" | "Hydro%" | "Pyro%" | "Physical%";
 
-export const builds: { [character: string]: Build[] } = {
+type Builds = {
+    [character in Character]: Build[]
+};
+
+// TODO: remove Partial once we have all characters
+export const builds: Partial<Builds> = {
     Keqing: [
         {
             playstyle: "On-Field Aggrevate DPS",
