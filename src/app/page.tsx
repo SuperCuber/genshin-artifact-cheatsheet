@@ -9,10 +9,10 @@ export default function Home() {
                 Builds: {Object.entries(builds).map(([name, builds]) => `${name} (${builds.length})`).join(", ")}
                 <hr />
                 {Object.entries(characters).map(([name, image]) =>
-                    <div>{name}: <Image key={name} src={image} alt={name} /></div>)}
+                    <div key={name}>{name}: <Image src={image} alt={name} /></div>)}
                 <hr />
                 {Object.entries(artifacts).map(([name, image]) =>
-                    <div>{name}: <Image key={name} src={image} alt={name} /></div>)}
+                    <div key={name}>{name}: <Image src={image} alt={name} /></div>)}
             </main>
         </div>
     );
