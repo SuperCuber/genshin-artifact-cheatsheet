@@ -2,6 +2,7 @@
     background: var(--gray-alpha-100);
     padding: 1em;
     border-radius: 8px;
+    width: 400px;
 }
 
 .top_row {
@@ -12,8 +13,11 @@
 
 .character_ions {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+}
+
+.artifact_builds h3 {
+    margin-top: 12px;
 }
 
 .main_stats > div {

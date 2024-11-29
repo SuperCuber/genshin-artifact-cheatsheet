@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "./ArtifactBuilds.module.css";
 import { ArtifactSet, BuildSpecificSet, Character, CircletIcon, GobletIcon, SandsIcon, artifactIcons } from "../lib/data";
 import CharacterBuildIcon from "./CharacterBuildIcon";
+import { formatStats } from "../lib/displayStats";
 
 interface ArtifactBuildsProps {
     artifactName: ArtifactSet;
@@ -13,13 +14,12 @@ interface ArtifactBuildsProps {
 }
 
 const ArtifactBuilds: React.FC<ArtifactBuildsProps> = ({ artifactName, characterBuilds }) => {
-    // TODO: sort by some global primary stat order
     // TODO: support highlighting later
-    const sandsStats = [...new Set(characterBuilds.flatMap(cb => cb.build.mainStats.sands))];
-    const gobletStats = [...new Set(characterBuilds.flatMap(cb => cb.build.mainStats.goblet))];
-    const circletStats = [...new Set(characterBuilds.flatMap(cb => cb.build.mainStats.circlet))];
+    const sandsStats = formatStats(characterBuilds.flatMap(cb => cb.build.mainStats.sands));
+    const gobletStats = formatStats(characterBuilds.flatMap(cb => cb.build.mainStats.goblet));
+    const circletStats = formatStats(characterBuilds.flatMap(cb => cb.build.mainStats.circlet));
 
-    const subStats = [...new Set(characterBuilds.flatMap(cb => cb.build.subStats))];
+    const subStats = formatStats(characterBuilds.flatMap(cb => cb.build.subStats));
 
     const characterIcons = Object.groupBy(characterBuilds, cb => cb.character);
 
