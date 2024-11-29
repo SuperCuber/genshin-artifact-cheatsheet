@@ -3,6 +3,7 @@
     padding: 1em;
     border-radius: 8px;
     width: 400px;
+    min-height: 432px;
 }
 
 .top_row {

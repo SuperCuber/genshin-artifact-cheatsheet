@@ -14,6 +14,7 @@ interface ArtifactBuildsProps {
 }
 
 const ArtifactBuilds: React.FC<ArtifactBuildsProps> = ({ artifactName, characterBuilds }) => {
+    // TODO: add null state (and maybe shove to bottom of the list)
     // TODO: support highlighting later
     const sandsStats = formatStats(characterBuilds.flatMap(cb => cb.build.mainStats.sands));
     const gobletStats = formatStats(characterBuilds.flatMap(cb => cb.build.mainStats.goblet));
