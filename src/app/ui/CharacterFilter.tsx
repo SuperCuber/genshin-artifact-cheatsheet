@@ -29,13 +29,17 @@ const CharacterFilter: React.FC<CharacterFilterProps> = ({ selectedCharacters, s
 
     return (
         <div className={styles.character_filter}>
-            <input
-                type="text"
-                placeholder="Search..."
-                className={styles.character_filter_search}
-                value={search}
-                onChange={e => setSearch(e.target.value)}
-            />
+            <div className={styles.top_row}>
+                <input
+                    type="text"
+                    placeholder="Search..."
+                    className={styles.character_filter_search}
+                    value={search}
+                    onChange={e => setSearch(e.target.value)}
+                />
+                <button onClick={() => setSelectedCharacters(allCharacters)}>Select All</button>
+                <button onClick={() => setSelectedCharacters([])}>Clear All</button>
+            </div>
             <div className={styles.character_filter_icons}>
                 {shownCharacters.map(character =>
                     <CharacterFilterIcon
@@ -45,7 +49,7 @@ const CharacterFilter: React.FC<CharacterFilterProps> = ({ selectedCharacters, s
                         onClick={() => toggleCharacter(character)}
                     />)}
             </div>
-        </div>)
+        </div >)
 }
 
 export default CharacterFilter;

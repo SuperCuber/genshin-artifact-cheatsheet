@@ -3,15 +3,13 @@
 import styles from "./page.module.css";
 import { allCharacters, ArtifactSet, builds, Character, groupByArtifact } from "./lib/data";
 import ArtifactBuilds from "./ui/ArtifactBuilds";
-import { characters } from "./lib/data/_images";
-import CharacterFilterIcon from "./ui/CharacterFilterIcon";
 import React, { useEffect } from "react";
 import CharacterFilter from "./ui/CharacterFilter";
 
 export default function Home() {
     const artifacts = groupByArtifact(builds);
 
-    const [selectedCharacters, setSelectedCharacters] = React.useState<Character[]>(allCharacters);
+    const [selectedCharacters, setSelectedCharacters] = React.useState<Character[]>(JSON.parse(localStorage.getItem("selectedCharacters") || "null") || allCharacters);
     const [filteredArtifacts, setFilteredArtifacts] = React.useState(artifacts);
 
     useEffect(() => {
@@ -19,6 +17,10 @@ export default function Home() {
         let filtered = entries.map(([set, builds]) =>
             [set, builds.filter(b => selectedCharacters.includes(b.character))]);
         setFilteredArtifacts(Object.fromEntries(filtered));
+    }, [selectedCharacters]);
+
+    useEffect(() => {
+        localStorage.setItem("selectedCharacters", JSON.stringify(selectedCharacters));
     }, [selectedCharacters]);
 
     return (

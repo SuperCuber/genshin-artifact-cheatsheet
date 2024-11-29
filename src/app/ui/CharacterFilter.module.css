@@ -2,9 +2,14 @@
     width: fit-content;
 }
 
-.character_filter_search {
+.top_row {
     width: 100%;
+    display: flex;
     margin-bottom: 8px;
+}
+
+.character_filter_search {
+    flex-grow: 1;
     font-size: 1.5em;
 }
 
