@@ -21,6 +21,8 @@ const ArtifactBuilds: React.FC<ArtifactBuildsProps> = ({ artifactName, character
 
     const subStats = [...new Set(characterBuilds.flatMap(cb => cb.build.subStats))];
 
+    const characterIcons = Object.groupBy(characterBuilds, cb => cb.character);
+
     return (
         <div className={styles.artifact_builds}>
             <div className={styles.top_row}>
@@ -32,18 +34,21 @@ const ArtifactBuilds: React.FC<ArtifactBuildsProps> = ({ artifactName, character
                 <h2>{artifactName}</h2>
             </div>
             <div className={styles.character_icons}>
-                {characterBuilds.map(({ character, build }) => (
-                    <CharacterBuildIcon key={character + build.playstyle + build.set.pieces} character={character} build={build} />
+                {Object.entries(characterIcons).map(([character, builds]) => (
+                    <CharacterBuildIcon key={character} character={character as Character} builds={builds.map(b => b.build)} />
                 ))}
             </div>
             <h3>Main Stats</h3>
             <div className={styles.main_stats}>
                 <div><Image src={SandsIcon} alt="Sands" width="32" height="32" />
-                    {sandsStats.join(" | ")}</div>
+                    {sandsStats.join(" | ")}
+                </div>
                 <div><Image src={GobletIcon} alt="Goblet" width="32" height="32" />
-                    {gobletStats.join(" | ")}</div>
+                    {gobletStats.join(" | ")}
+                </div>
                 <div><Image src={CircletIcon} alt="Circlet" width="32" height="32" />
-                    {circletStats.join(" | ")}</div>
+                    {circletStats.join(" | ")}
+                </div>
             </div>
             <h3>Substats</h3>
             <div>{subStats.join(" | ")}</div>

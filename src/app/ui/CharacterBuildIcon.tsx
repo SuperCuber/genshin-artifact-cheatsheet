@@ -5,11 +5,11 @@ import { BuildSpecificSet, Character, characterIcons } from "../lib/data";
 
 interface CharacterBuildIconProps {
     character: Character;
-    build: BuildSpecificSet;
+    builds: BuildSpecificSet[];
 }
 
 // TODO: multiple playstyles of the same character and set need to go into the same icon. accept build[]
-const CharacterBuildIcon: React.FC<CharacterBuildIconProps> = ({ character, build }) => {
+const CharacterBuildIcon: React.FC<CharacterBuildIconProps> = ({ character, builds }) => {
     return (
         <Image src={characterIcons[character]} alt={character} width={64} height={64} />
     );

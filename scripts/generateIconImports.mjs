@@ -1,5 +1,4 @@
 import fs from 'fs';
-import path from 'path';
 
 function generateImports(rootDir, name) {
     const iconFiles = fs.readdirSync(rootDir);
@@ -10,7 +9,7 @@ function generateImports(rootDir, name) {
         const path = "/" + rootDir + filename;
         return {name, varname, path};
     });
-    const importText = imports.map(({name, varname, path}) => `import ${varname} from '${path}';`).join("\n")
+    const importText = imports.map(({varname, path}) => `import ${varname} from '${path}';`).join("\n")
     const exportText = imports.map(({name, varname}) => `['${name}']: ${varname}`).join(",\n  ");
     return `${importText}
 export const ${name} = {
