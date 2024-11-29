@@ -1,0 +1,24 @@
+.character_filter {
+    width: fit-content;
+}
+
+.character_filter_search {
+    width: 100%;
+    margin-bottom: 8px;
+    font-size: 1.5em;
+}
+
+.character_filter_icons {
+    height: 230px;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+
+    display: grid;
+    grid-template-columns: repeat(6, 64px);
+    align-content: start;
+    gap: 4px;
+}
+
+.character_filter_icons>* {
+    scroll-snap-align: start;
+}

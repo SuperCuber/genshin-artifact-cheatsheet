@@ -1,15 +1,15 @@
 "use client";
 
 import styles from "./page.module.css";
-import { ArtifactSet, builds, Character, groupByArtifact } from "./lib/data";
+import { allCharacters, ArtifactSet, builds, Character, groupByArtifact } from "./lib/data";
 import ArtifactBuilds from "./ui/ArtifactBuilds";
 import { characters } from "./lib/data/_images";
 import CharacterFilterIcon from "./ui/CharacterFilterIcon";
 import React, { useEffect } from "react";
+import CharacterFilter from "./ui/CharacterFilter";
 
 export default function Home() {
     const artifacts = groupByArtifact(builds);
-    const allCharacters = Object.keys(characters) as Character[];
 
     const [selectedCharacters, setSelectedCharacters] = React.useState<Character[]>(allCharacters);
     const [filteredArtifacts, setFilteredArtifacts] = React.useState(artifacts);
@@ -25,20 +25,7 @@ export default function Home() {
         <main className={styles.main}>
             <h1>Genshin Impact Artifact Cheatsheet</h1>
             <div className={styles.filters}>
-                Character filter:
-                <div className={styles.character_filters}>
-                    {allCharacters.map(character =>
-                        <CharacterFilterIcon
-                            key={character}
-                            character={character as Character}
-                            selected={selectedCharacters.includes(character)}
-                            onClick={() => setSelectedCharacters(
-                                selectedCharacters.includes(character)
-                                    ? selectedCharacters.filter(c => c !== character)
-                                    : [...selectedCharacters, character]
-                            )}
-                        />)}
-                </div>
+                <CharacterFilter selectedCharacters={selectedCharacters} setSelectedCharacters={setSelectedCharacters} />
             </div>
             <div className={styles.artifact_sets}>
                 {Object.entries(filteredArtifacts).map(([artifactName, characterBuilds]) => (

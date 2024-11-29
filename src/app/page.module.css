@@ -28,12 +28,6 @@
     margin-bottom: 20px;
 }
 
-.character_filters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-}
-
 .artifact_sets {
   display: flex;
   flex-wrap: wrap;

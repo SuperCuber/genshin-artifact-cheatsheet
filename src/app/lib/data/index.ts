@@ -7,5 +7,6 @@ export { artifactIcons, characterIcons };
 export { SandsIcon, GobletIcon, CircletIcon };
 export type Character = keyof typeof characterIcons
 export type ArtifactSet = keyof typeof artifactIcons
+export const allCharacters = Object.keys(characterIcons) as Character[];
 
 export * from './_builds'
