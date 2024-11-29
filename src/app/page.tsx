@@ -6,6 +6,12 @@ import ArtifactBuilds from "./ui/ArtifactBuilds";
 import React, { useEffect } from "react";
 import CharacterFilter from "./ui/CharacterFilter";
 
+interface Filters {
+    // TODO: implement dis
+    selectedCharacters: Character[];
+    minimumPriority: number;
+}
+
 export default function Home() {
     const artifacts = groupByArtifact(builds);
 

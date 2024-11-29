@@ -3,6 +3,8 @@ import { artifactIcons, ArtifactSet, Character } from ".";
 export type Build = {
     playstyle: string;
     infographic: string;
+    patch: string;
+    niche?: boolean;
     sets: BuildArtifactSet[];
     mainStats: {
         sands: Stat[];
@@ -16,6 +18,7 @@ export type BuildArtifactSet = {
     name: ArtifactSet;
     pieces: 2 | 4;
     priority: number;
+    playrate: number;
     comment?: string;
 }
 
