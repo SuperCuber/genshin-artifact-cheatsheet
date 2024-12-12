@@ -18,7 +18,7 @@ export type BuildArtifactSet = {
     name: ArtifactSet;
     pieces: 2 | 4;
     priority: number;
-    playrate: number;
+    playrate?: number;
     comment?: string;
 }
 
@@ -26,7 +26,7 @@ export type BuildSpecificSet = Omit<Build, "sets"> & { set: BuildArtifactSet };
 
 export type Stat = "ATK%" | "DEF%" | "HP%" | "Heal%" | "CRIT" | "CRate" | "CDMG" | "EM" | "ER" | "Anemo%" | "Cryo%" | "Dendro%" | "Electro%" | "Geo%" | "Hydro%" | "Pyro%" | "Physical%";
 
-type Builds = { [character in Character]: Build[] };
+export type Builds = { [character in Character]: Build[] };
 
 type BuildsByArtifact = {
     [artifact in ArtifactSet]: {
@@ -57,7 +57,3 @@ export function groupByArtifact(builds: Partial<Builds>): BuildsByArtifact {
     return result;
 }
 
-// TODO: remove Partial once we have all characters
-export const builds: Partial<Builds> = {
-    
-}
