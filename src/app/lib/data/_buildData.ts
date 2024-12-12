@@ -14,6 +14,30 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                     comment: "",
                 },
+                {
+                    name: "Golden Troupe",
+                    pieces: 4,
+                    priority: 1,
+                    comment: "",
+                },
+                {
+                    name: "Husk Of Opulent Dreams",
+                    pieces: 2,
+                    priority: 2,
+                    comment: "",
+                },
+                {
+                    name: "Golden Troupe",
+                    pieces: 2,
+                    priority: 2,
+                    comment: "",
+                },
+                {
+                    name: "Archaic Petra",
+                    pieces: 2,
+                    priority: 2,
+                    comment: "",
+                },
             ],
             mainStats: {
                 sands: ["DEF%"],
@@ -23,4 +47,5 @@ export const builds: Partial<Builds> = {
             subStats: ["ER", "CRIT", "DEF%", "ATK%"]
         }
     ],
+
 }
