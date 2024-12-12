@@ -79,6 +79,8 @@ export const artifacts = {
 
 
 import Albedo from '/public/icons/characters/Albedo.png';
+import Alhaitham from '/public/icons/characters/Alhaitham.png';
+import Aloy from '/public/icons/characters/Aloy.png';
 import Amber from '/public/icons/characters/Amber.png';
 import AnemoTraveler from '/public/icons/characters/Anemo Traveler.png';
 import AratakiItto from '/public/icons/characters/Arataki Itto.png';
@@ -91,6 +93,7 @@ import Chasca from '/public/icons/characters/Chasca.png';
 import Chevreuse from '/public/icons/characters/Chevreuse.png';
 import Chiori from '/public/icons/characters/Chiori.png';
 import Chongyun from '/public/icons/characters/Chongyun.png';
+import Citlali from '/public/icons/characters/Citlali.webp';
 import Clorinde from '/public/icons/characters/Clorinde.png';
 import Cyno from '/public/icons/characters/Cyno.png';
 import Dehya from '/public/icons/characters/Dehya.png';
@@ -119,10 +122,12 @@ import Kinich from '/public/icons/characters/Kinich.png';
 import Kirara from '/public/icons/characters/Kirara.png';
 import Klee from '/public/icons/characters/Klee.png';
 import KukiShinobu from '/public/icons/characters/Kuki Shinobu.png';
+import LanYan from '/public/icons/characters/Lan Yan.webp';
 import Layla from '/public/icons/characters/Layla.png';
 import Lisa from '/public/icons/characters/Lisa.png';
 import Lynette from '/public/icons/characters/Lynette.png';
 import Lyney from '/public/icons/characters/Lyney.png';
+import Mavuika from '/public/icons/characters/Mavuika.webp';
 import Mona from '/public/icons/characters/Mona.png';
 import Mualani from '/public/icons/characters/Mualani.png';
 import Nahida from '/public/icons/characters/Nahida.png';
@@ -159,6 +164,8 @@ import YunJin from '/public/icons/characters/Yun Jin.png';
 import Zhongli from '/public/icons/characters/Zhongli.png';
 export const characters = {
   ['Albedo']: Albedo,
+  ['Alhaitham']: Alhaitham,
+  ['Aloy']: Aloy,
   ['Amber']: Amber,
   ['Anemo Traveler']: AnemoTraveler,
   ['Arataki Itto']: AratakiItto,
@@ -171,6 +178,7 @@ export const characters = {
   ['Chevreuse']: Chevreuse,
   ['Chiori']: Chiori,
   ['Chongyun']: Chongyun,
+  ['Citlali']: Citlali,
   ['Clorinde']: Clorinde,
   ['Cyno']: Cyno,
   ['Dehya']: Dehya,
@@ -199,10 +207,12 @@ export const characters = {
   ['Kirara']: Kirara,
   ['Klee']: Klee,
   ['Kuki Shinobu']: KukiShinobu,
+  ['Lan Yan']: LanYan,
   ['Layla']: Layla,
   ['Lisa']: Lisa,
   ['Lynette']: Lynette,
   ['Lyney']: Lyney,
+  ['Mavuika']: Mavuika,
   ['Mona']: Mona,
   ['Mualani']: Mualani,
   ['Nahida']: Nahida,

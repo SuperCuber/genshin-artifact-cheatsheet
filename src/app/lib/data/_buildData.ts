@@ -12,31 +12,26 @@ export const builds: Partial<Builds> = {
                     name: "Husk Of Opulent Dreams",
                     pieces: 4,
                     priority: 0,
-                    comment: "",
                 },
                 {
                     name: "Golden Troupe",
                     pieces: 4,
                     priority: 1,
-                    comment: "",
                 },
                 {
                     name: "Husk Of Opulent Dreams",
                     pieces: 2,
                     priority: 2,
-                    comment: "",
                 },
                 {
                     name: "Golden Troupe",
                     pieces: 2,
                     priority: 2,
-                    comment: "",
                 },
                 {
                     name: "Archaic Petra",
                     pieces: 2,
                     priority: 2,
-                    comment: "",
                 },
             ],
             mainStats: {
@@ -45,6 +40,47 @@ export const builds: Partial<Builds> = {
                 circlet: ["CRIT"]
             },
             subStats: ["ER", "CRIT", "DEF%", "ATK%"]
+        }
+    ],
+    Alhaitham: [
+        {
+            playstyle: "On-Field DPS",
+            infographic: "https://keqingmains.com/wp-content/uploads/2024/02/Alhaitham-Infographic-4.4.png",
+            patch: "4.4",
+            sets: [
+                {
+                    name: "Gilded Dreams",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Gilded Dreams",
+                    pieces: 2,
+                    priority: 1,
+                },
+                {
+                    name: "Deepwood Memories",
+                    pieces: 2,
+                    priority: 1,
+                },
+                {
+                    name: "Emblem Of Severed Fate",
+                    pieces: 2,
+                    priority: 1,
+                },
+                {
+                    name: "Marechaussee Hunter",
+                    pieces: 4,
+                    priority: 2,
+                    comment: "With Furina"
+                },
+            ],
+            mainStats: {
+                sands: ["EM", "ATK%"],
+                goblet: ["Dendro%"],
+                circlet: ["CRIT"]
+            },
+            subStats: ["ER", "EM", "CRIT"]
         }
     ],
 
