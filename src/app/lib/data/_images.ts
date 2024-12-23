@@ -88,6 +88,8 @@ import Arlecchino from '/public/icons/characters/Arlecchino.png';
 import Baizhu from '/public/icons/characters/Baizhu.png';
 import Barbara from '/public/icons/characters/Barbara.png';
 import Beidou from '/public/icons/characters/Beidou.png';
+import Bennet from '/public/icons/characters/Bennet.png';
+import Candace from '/public/icons/characters/Candace.png';
 import Charlotte from '/public/icons/characters/Charlotte.png';
 import Chasca from '/public/icons/characters/Chasca.png';
 import Chevreuse from '/public/icons/characters/Chevreuse.png';
@@ -95,10 +97,15 @@ import Chiori from '/public/icons/characters/Chiori.png';
 import Chongyun from '/public/icons/characters/Chongyun.png';
 import Citlali from '/public/icons/characters/Citlali.webp';
 import Clorinde from '/public/icons/characters/Clorinde.png';
+import Collei from '/public/icons/characters/Collei.png';
+import CryoTraveler from '/public/icons/characters/Cryo Traveler.png';
 import Cyno from '/public/icons/characters/Cyno.png';
 import Dehya from '/public/icons/characters/Dehya.png';
+import DendroTraveler from '/public/icons/characters/Dendro Traveler.png';
 import Diluc from '/public/icons/characters/Diluc.png';
+import Diona from '/public/icons/characters/Diona.png';
 import Dori from '/public/icons/characters/Dori.png';
+import ElectroTraveler from '/public/icons/characters/Electro Traveler.png';
 import Emilie from '/public/icons/characters/Emilie.png';
 import Eula from '/public/icons/characters/Eula.png';
 import Faruzan from '/public/icons/characters/Faruzan.png';
@@ -107,6 +114,8 @@ import Freminet from '/public/icons/characters/Freminet.png';
 import Furina from '/public/icons/characters/Furina.png';
 import Gaming from '/public/icons/characters/Gaming.png';
 import Ganyu from '/public/icons/characters/Ganyu.png';
+import GeoTraveler from '/public/icons/characters/Geo Traveler.png';
+import Gorou from '/public/icons/characters/Gorou.png';
 import Heizou from '/public/icons/characters/Heizou.png';
 import HuTao from '/public/icons/characters/Hu Tao.png';
 import HydroTraveler from '/public/icons/characters/Hydro Traveler.png';
@@ -121,6 +130,7 @@ import Keqing from '/public/icons/characters/Keqing.png';
 import Kinich from '/public/icons/characters/Kinich.png';
 import Kirara from '/public/icons/characters/Kirara.png';
 import Klee from '/public/icons/characters/Klee.png';
+import KujouSara from '/public/icons/characters/Kujou Sara.png';
 import KukiShinobu from '/public/icons/characters/Kuki Shinobu.png';
 import LanYan from '/public/icons/characters/Lan Yan.webp';
 import Layla from '/public/icons/characters/Layla.png';
@@ -128,6 +138,7 @@ import Lisa from '/public/icons/characters/Lisa.png';
 import Lynette from '/public/icons/characters/Lynette.png';
 import Lyney from '/public/icons/characters/Lyney.png';
 import Mavuika from '/public/icons/characters/Mavuika.webp';
+import Mika from '/public/icons/characters/Mika.png';
 import Mona from '/public/icons/characters/Mona.png';
 import Mualani from '/public/icons/characters/Mualani.png';
 import Nahida from '/public/icons/characters/Nahida.png';
@@ -136,6 +147,8 @@ import Neuvilette from '/public/icons/characters/Neuvilette.png';
 import Nilou from '/public/icons/characters/Nilou.png';
 import Ningguang from '/public/icons/characters/Ningguang.png';
 import Noelle from '/public/icons/characters/Noelle.png';
+import Ororon from '/public/icons/characters/Ororon.png';
+import PyroTraveler from '/public/icons/characters/Pyro Traveler.png';
 import Qiqi from '/public/icons/characters/Qiqi.png';
 import RaidenShogun from '/public/icons/characters/Raiden Shogun.png';
 import Razor from '/public/icons/characters/Razor.png';
@@ -173,6 +186,8 @@ export const characters = {
   ['Baizhu']: Baizhu,
   ['Barbara']: Barbara,
   ['Beidou']: Beidou,
+  ['Bennet']: Bennet,
+  ['Candace']: Candace,
   ['Charlotte']: Charlotte,
   ['Chasca']: Chasca,
   ['Chevreuse']: Chevreuse,
@@ -180,10 +195,15 @@ export const characters = {
   ['Chongyun']: Chongyun,
   ['Citlali']: Citlali,
   ['Clorinde']: Clorinde,
+  ['Collei']: Collei,
+  ['Cryo Traveler']: CryoTraveler,
   ['Cyno']: Cyno,
   ['Dehya']: Dehya,
+  ['Dendro Traveler']: DendroTraveler,
   ['Diluc']: Diluc,
+  ['Diona']: Diona,
   ['Dori']: Dori,
+  ['Electro Traveler']: ElectroTraveler,
   ['Emilie']: Emilie,
   ['Eula']: Eula,
   ['Faruzan']: Faruzan,
@@ -192,6 +212,8 @@ export const characters = {
   ['Furina']: Furina,
   ['Gaming']: Gaming,
   ['Ganyu']: Ganyu,
+  ['Geo Traveler']: GeoTraveler,
+  ['Gorou']: Gorou,
   ['Heizou']: Heizou,
   ['Hu Tao']: HuTao,
   ['Hydro Traveler']: HydroTraveler,
@@ -206,6 +228,7 @@ export const characters = {
   ['Kinich']: Kinich,
   ['Kirara']: Kirara,
   ['Klee']: Klee,
+  ['Kujou Sara']: KujouSara,
   ['Kuki Shinobu']: KukiShinobu,
   ['Lan Yan']: LanYan,
   ['Layla']: Layla,
@@ -213,6 +236,7 @@ export const characters = {
   ['Lynette']: Lynette,
   ['Lyney']: Lyney,
   ['Mavuika']: Mavuika,
+  ['Mika']: Mika,
   ['Mona']: Mona,
   ['Mualani']: Mualani,
   ['Nahida']: Nahida,
@@ -221,6 +245,8 @@ export const characters = {
   ['Nilou']: Nilou,
   ['Ningguang']: Ningguang,
   ['Noelle']: Noelle,
+  ['Ororon']: Ororon,
+  ['Pyro Traveler']: PyroTraveler,
   ['Qiqi']: Qiqi,
   ['Raiden Shogun']: RaidenShogun,
   ['Razor']: Razor,
