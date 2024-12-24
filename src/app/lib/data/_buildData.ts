@@ -2619,7 +2619,7 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "",
+                    name: "Marechaussee Hunter",
                     pieces: 4,
                     priority: 1,
                     comment: "With Furina"
@@ -2922,6 +2922,1342 @@ export const builds: Partial<Builds> = {
                 circlet: ["EM", "CRIT"]
             },
             subStats: ["ER", "EM", "CRIT", "ATK%"]
+        }
+    ],
+    Sethos: [
+        {
+            playstyle: "On-Field Aggravate DPS",
+            patch: "5.1",
+            infographic: "https://keqingmains.com/wp-content/uploads/2024/11/Sethos-Infographic-5.1.png",
+            sets: [
+                {
+                    name: "Wanderer's Troupe",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Desert Pavilion Chronicle",
+                    pieces: 4,
+                    priority: 1,
+                },
+                {
+                    name: "Gilded Dreams",
+                    pieces: 4,
+                    priority: 2,
+                },
+                {
+                    name: "Wanderer's Troupe",
+                    pieces: 2,
+                    priority: 3,
+                },
+                {
+                    name: "Thundering Fury",
+                    pieces: 2,
+                    priority: 3,
+                },
+                {
+                    name: "Marechaussee Hunter",
+                    pieces: 2,
+                    priority: 3,
+                },
+            ],
+            mainStats: {
+                sands: ["EM", "ER"],
+                goblet: ["Electro%"],
+                circlet: ["CRIT"]
+            },
+            subStats: ["ER", "CRIT", "EM", "ATK%"]
+        }
+    ],
+    "Kuki Shinobu": [
+        {
+            playstyle: "Hyperbloom Trigger",
+            patch: "5.1",
+            infographic: "https://keqingmains.com/wp-content/uploads/2024/11/Shinobu-Hyperbloom-Infographic.png",
+            sets: [
+                {
+                    name: "Flower Of Paradise Lost",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Gilded Dreams",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Flower Of Paradise Lost",
+                    pieces: 2,
+                    priority: 0,
+                },
+                {
+                    name: "Gilded Dreams",
+                    pieces: 2,
+                    priority: 0,
+                },
+                {
+                    name: "Wanderer's Troupe",
+                    pieces: 2,
+                    priority: 0,
+                },
+            ],
+            mainStats: {
+                sands: ["EM"],
+                goblet: ["EM"],
+                circlet: ["EM"]
+            },
+            subStats: ["EM", "ER", "HP%"]
+        },
+        {
+            playstyle: "Quicken Support",
+            patch: "5.1",
+            infographic: "https://keqingmains.com/wp-content/uploads/2024/11/Shinobu-Quicken-Infographic.png",
+            sets: [
+                {
+                    name: "Tenacity Of The Millelith",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Instructor",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Deepwood Memories",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Scroll Of The Hero Of Cinder City",
+                    pieces: 4,
+                    priority: 0,
+                },
+            ],
+            mainStats: {
+                sands: ["EM"],
+                goblet: ["Electro%", "EM", "HP%"],
+                circlet: ["CRIT", "Heal%"]
+            },
+            subStats: ["ER", "CRIT", "EM", "HP%"]
+        }
+    ],
+    Sigewinne: [
+        {
+            playstyle: "Healer",
+            patch: "4.7",
+            infographic: "https://keqingmains.com/wp-content/uploads/2024/06/Sigewinne_4.7.png",
+            sets: [
+                {
+                    name: "Ocean-Hued Clam",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Song Of Days Past",
+                    pieces: 4,
+                    priority: 1,
+                },
+                {
+                    name: "Tenacity Of The Millelith",
+                    pieces: 4,
+                    priority: 2,
+                },
+            ],
+            mainStats: {
+                sands: ["HP%", "ER"],
+                goblet: ["HP%", "Hydro%"],
+                circlet: ["HP%", "CRIT"]
+            },
+            subStats: ["ER", "HP%", "CRIT"]
+        }
+    ],
+    Sucrose: [
+        {
+            playstyle: "Support | Driver",
+            patch: "5.2",
+            infographic: "https://keqingmains.com/wp-content/uploads/2024/11/Sucrose-Infographic-5.2.png",
+            sets: [
+                {
+                    name: "Viridescent Venerer",
+                    pieces: 4,
+                    priority: 0,
+                },
+            ],
+            mainStats: {
+                sands: ["EM", "ER"],
+                goblet: ["EM"],
+                circlet: ["EM"]
+            },
+            subStats: ["ER", "EM"]
+        }
+    ],
+    Tartaglia: [
+        {
+            playstyle: "On-Field DPS | Enabler",
+            patch: "4.4",
+            infographic: "https://keqingmains.com/wp-content/uploads/2024/03/Tartaglia-Infographic-4.4-Update.png",
+            sets: [
+                {
+                    name: "Nymph's Dream",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Heart Of Depth",
+                    pieces: 4,
+                    priority: 1,
+                },
+                {
+                    name: "Nymph's Dream",
+                    pieces: 2,
+                    priority: 1,
+                },
+                {
+                    name: "Heart Of Depth",
+                    pieces: 2,
+                    priority: 1,
+                },
+                {
+                    name: "Shimenawa's Reminiscence",
+                    pieces: 2,
+                    priority: 1,
+                },
+                {
+                    name: "Emblem Of Severed Fate",
+                    pieces: 2,
+                    priority: 1,
+                },
+            ],
+            mainStats: {
+                sands: ["ATK%"],
+                goblet: ["Hydro%"],
+                circlet: ["CRIT"]
+            },
+            subStats: ["ER", "CRIT", "ATK%", "EM"]
+        }
+    ],
+    Thoma: [
+        {
+            playstyle: "Off-Field Burgeon DPS",
+            patch: "5.0",
+            infographic: "https://keqingmains.com/wp-content/uploads/2024/09/Thoma_Burgeon_5.0_-_cote__euphorysm.png",
+            sets: [
+                {
+                    name: "Flower Of Paradise Lost",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Gilded Dreams",
+                    pieces: 4,
+                    priority: 1,
+                },
+                {
+                    name: "Wanderer's Troupe",
+                    pieces: 2,
+                    priority: 2,
+                },
+                {
+                    name: "Gilded Dreams",
+                    pieces: 2,
+                    priority: 2,
+                },
+            ],
+            mainStats: {
+                sands: ["ER", "EM", "HP%"],
+                goblet: ["EM", "HP%"],
+                circlet: ["EM", "HP%"]
+            },
+            subStats: ["ER", "EM", "HP%", "CRate"]
+        },
+        {
+            playstyle: "Off-Field Support",
+            patch: "5.0",
+            infographic: "https://keqingmains.com/wp-content/uploads/2024/09/Thoma_Support_5.0_-_cote__euphorysm.png",
+            sets: [
+                {
+                    name: "Noblesse Oblige",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Instructor",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Deepwood Memories",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Scroll Of The Hero Of Cinder City",
+                    pieces: 4,
+                    priority: 0,
+                },
+            ],
+            mainStats: {
+                sands: ["ER", "HP%"],
+                goblet: ["HP%"],
+                circlet: ["HP%", "CRate"]
+            },
+            subStats: ["ER", "CRate", "HP%"]
+        }
+    ],
+    Tighnari: [
+        {
+            playstyle: "Quickswap DPS",
+            patch: "4.6",
+            infographic: "https://keqingmains.com/wp-content/uploads/2024/05/Tighnari-Infographic-4.6.png",
+            sets: [
+                {
+                    name: "Wanderer's Troupe",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Gilded Dreams",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Deepwood Memories",
+                    pieces: 2,
+                    priority: 1,
+                },
+                {
+                    name: "Gilded Dreams",
+                    pieces: 2,
+                    priority: 1,
+                },
+                {
+                    name: "Wanderer's Troupe",
+                    pieces: 2,
+                    priority: 1,
+                },
+                {
+                    name: "Gladiator's Finale",
+                    pieces: 2,
+                    priority: 1,
+                },
+            ],
+            mainStats: {
+                sands: ["ATK%", "EM"],
+                goblet: ["Dendro%"],
+                circlet: ["CRIT"]
+            },
+            subStats: ["ER", "CRIT", "ATK%", "EM"]
+        }
+    ],
+    Venti: [
+        {
+            playstyle: "Off-Field DPS",
+            patch: "5.0",
+            infographic: "https://keqingmains.com/wp-content/uploads/2024/04/Venti_5.0_-_kol__cote.png",
+            sets: [
+                {
+                    name: "Viridescent Venerer",
+                    pieces: 4,
+                    priority: 0,
+                },
+            ],
+            mainStats: {
+                sands: ["EM", "ATK%"],
+                goblet: ["EM", "Anemo%"],
+                circlet: ["EM", "CRIT"]
+            },
+            subStats: ["ER", "EM", "CRIT", "ATK%"]
+        }
+    ],
+    Wanderer: [
+        {
+            playstyle: "On-Field DPS",
+            patch: "4.6",
+            infographic: "https://keqingmains.com/wp-content/uploads/2023/12/Wanderer_4.6_-_euphorysm__cote.png",
+            sets: [
+                {
+                    name: "Desert Pavilion Chronicle",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Shimenawa's Reminiscence",
+                    pieces: 4,
+                    priority: 1,
+                },
+                {
+                    name: "Marechaussee Hunter",
+                    pieces: 4,
+                    priority: 2,
+                    comment: "With Furina"
+                },
+            ],
+            mainStats: {
+                sands: ["ATK%"],
+                goblet: ["Anemo%"],
+                circlet: ["CRIT"]
+            },
+            subStats: ["CRIT", "ATK%", "ER"]
+        }
+    ],
+    Wriothesley: [
+        {
+            playstyle: "Freeze and Mono Cryo DPS",
+            patch: "5.2",
+            infographic: "https://keqingmains.com/wp-content/uploads/2024/11/Wriothesely-Freeze-Mono-Cryo-Infog-5.2.png",
+            sets: [
+                {
+                    name: "Marechaussee Hunter",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Blizzard Strayer",
+                    pieces: 4,
+                    priority: 1,
+                },
+                {
+                    name: "Shimenawa's Reminiscence",
+                    pieces: 4,
+                    priority: 2,
+                },
+            ],
+            mainStats: {
+                sands: ["ATK%"],
+                goblet: ["Cryo%"],
+                circlet: ["CRIT"]
+            },
+            subStats: ["CRIT", "ATK%", "ER"]
+        },
+        {
+            playstyle: "Melt DPS",
+            patch: "5.2",
+            infographic: "https://keqingmains.com/wp-content/uploads/2024/11/Wriothesley-Melt-Infographic-5.2.png",
+            sets: [
+                {
+                    name: "Marechaussee Hunter",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Unfinished Reverie",
+                    pieces: 4,
+                    priority: 1,
+                },
+                {
+                    name: "Shimenawa's Reminiscence",
+                    pieces: 4,
+                    priority: 2,
+                },
+            ],
+            mainStats: {
+                sands: ["ATK%", "EM"],
+                goblet: ["Cryo%"],
+                circlet: ["CRIT"]
+            },
+            subStats: ["CRIT", "EM", "ATK%", "ER"]
+        }
+    ],
+    Xiangling: [
+        {
+            playstyle: "Off-Field DPS",
+            patch: "5.0",
+            infographic: "https://keqingmains.com/wp-content/uploads/2024/03/Xiangling_5.0_-_Squid.png",
+            sets: [
+                {
+                    name: "Emblem Of Severed Fate",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Crimson Witch Of Flames",
+                    pieces: 4,
+                    priority: 1,
+                    comment: "Vaporize"
+                },
+                {
+                    name: "Gilded Dreams",
+                    pieces: 4,
+                    priority: 1,
+                    comment: "Vaporize"
+                },
+            ],
+            mainStats: {
+                sands: ["ER", "ATK%", "EM"],
+                goblet: ["Pyro%"],
+                circlet: ["CRIT"]
+            },
+            subStats: ["ER", "CRIT", "ATK%", "EM"]
+        }
+    ],
+    Xianyun: [
+        {
+            playstyle: "Plunging Attack Support",
+            patch: "4.4",
+            infographic: "https://keqingmains.com/wp-content/uploads/2024/01/Xianyun-Infographic-4.4.png",
+            sets: [
+                {
+                    name: "Viridescent Venerer",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Ocean-Hued Clam",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Noblesse Oblige",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Song Of Days Past",
+                    pieces: 4,
+                    priority: 0,
+                },
+            ],
+            mainStats: {
+                sands: ["ER", "ATK%"],
+                goblet: ["ATK%"],
+                circlet: ["ATK%"]
+            },
+            subStats: ["ER", "ATK%", "CRate"]
+        }
+    ],
+    Xiao: [
+        {
+            playstyle: "On-Field DPS",
+            patch: "4.4",
+            infographic: "https://keqingmains.com/wp-content/uploads/2024/03/Xiao-Infographic-4.4.png",
+            sets: [
+                {
+                    name: "Vermillion Hereafter",
+                    pieces: 4,
+                    priority: 0,
+                    comment: "Strongbox"
+                },
+                {
+                    name: "Marechaussee Hunter",
+                    pieces: 4,
+                    priority: 0,
+                    comment: "Best to Farm"
+                },
+                {
+                    name: "Viridescent Venerer",
+                    pieces: 2,
+                    priority: 1,
+                },
+                {
+                    name: "Desert Pavilion Chronicle",
+                    pieces: 2,
+                    priority: 1,
+                },
+                {
+                    name: "Shimenawa's Reminiscence",
+                    pieces: 2,
+                    priority: 1,
+                },
+                {
+                    name: "Gladiator's Finale",
+                    pieces: 2,
+                    priority: 1,
+                },
+            ],
+            mainStats: {
+                sands: ["ATK%"],
+                goblet: ["Anemo%", "ATK%"],
+                circlet: ["CRIT"]
+            },
+            subStats: ["ER", "CRIT", "ATK%"]
+        }
+    ],
+    Xilonen: [
+        {
+            playstyle: "Healer | Support",
+            patch: "5.1",
+            infographic: "https://keqingmains.com/wp-content/uploads/2024/10/Xilonen-Infographic.png",
+            sets: [
+                {
+                    name: "Scroll Of The Hero Of Cinder City",
+                    pieces: 4,
+                    priority: 0,
+                },
+            ],
+            mainStats: {
+                sands: ["DEF%", "ER"],
+                goblet: ["DEF%"],
+                circlet: ["DEF%", "Heal%", "CRate"]
+            },
+            subStats: ["ER", "CRate", "DEF%"]
+        }
+    ],
+    Xinyan: [
+        {
+            playstyle: "Physical DPS",
+            patch: "5.1",
+            infographic: "https://keqingmains.com/wp-content/uploads/2024/10/Xinyan-Physical-DPS-Infographic-1.png",
+            sets: [
+                {
+                    name: "Marechaussee Hunter",
+                    pieces: 4,
+                    priority: 0,
+                    comment: "With Furina"
+                },
+                {
+                    name: "Pale Flame",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Pale Flame",
+                    pieces: 2,
+                    priority: 0,
+                },
+                {
+                    name: "Bloodstained Chivalry",
+                    pieces: 2,
+                    priority: 0,
+                },
+                {
+                    name: "Emblem Of Severed Fate",
+                    pieces: 2,
+                    priority: 0,
+                },
+                {
+                    name: "Shimenawa's Reminiscence",
+                    pieces: 2,
+                    priority: 0,
+                },
+                {
+                    name: "Noblesse Oblige",
+                    pieces: 2,
+                    priority: 0,
+                },
+                {
+                    name: "Husk Of Opulent Dreams",
+                    pieces: 2,
+                    priority: 0,
+                },
+            ],
+            mainStats: {
+                sands: ["ATK%", "ER", "DEF%"],
+                goblet: ["Physical%"],
+                circlet: ["CRIT"]
+            },
+            subStats: ["ER", "CRIT", "ATK%", "DEF%"]
+        },
+        {
+            playstyle: "Pyro DPS",
+            patch: "5.1",
+            infographic: "https://keqingmains.com/wp-content/uploads/2024/10/Xinyan-Pyro-DPS-Infographic.png",
+            sets: [
+                {
+                    name: "Marechaussee Hunter",
+                    pieces: 4,
+                    priority: 0,
+                    comment: "With Furina"
+                },
+                {
+                    name: "Lavawalker",
+                    pieces: 4,
+                    priority: 0,
+                    comment: "Mono Pyro"
+                },
+                {
+                    name: "Emblem Of Severed Fate",
+                    pieces: 2,
+                    priority: 1,
+                },
+                {
+                    name: "Crimson Witch Of Flames",
+                    pieces: 2,
+                    priority: 1,
+                },
+                {
+                    name: "Shimenawa's Reminiscence",
+                    pieces: 2,
+                    priority: 1,
+                },
+            ],
+            mainStats: {
+                sands: ["ATK%"],
+                goblet: ["Pyro%"],
+                circlet: ["CRIT"]
+            },
+            subStats: ["ER", "CRIT", "ATK%"]
+        },
+        {
+            playstyle: "Off-Field Shielder",
+            patch: "5.1",
+            infographic: "https://keqingmains.com/wp-content/uploads/2024/10/Xinyan-Shielder-Infographic.png",
+            sets: [
+                {
+                    name: "Tenacity Of The Millelith",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Scroll Of The Hero Of Cinder City",
+                    pieces: 4,
+                    priority: 1,
+                },
+                {
+                    name: "Noblesse Oblige",
+                    pieces: 4,
+                    priority: 2,
+                },
+                {
+                    name: "Husk Of Opulent Dreams",
+                    pieces: 4,
+                    priority: 3,
+                },
+            ],
+            mainStats: {
+                sands: ["DEF%", "ER"],
+                goblet: ["DEF%"],
+                circlet: ["DEF%"]
+            },
+            subStats: ["ER", "DEF%", "CRate"]
+        }
+    ],
+    "Yae Miko": [
+        {
+            playstyle: "Off-Field DPS",
+            patch: "4.4",
+            infographic: "https://keqingmains.com/wp-content/uploads/2024/02/Yae-Infographic-4.4.png",
+            sets: [
+                {
+                    name: "Golden Troupe",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Gilded Dreams",
+                    pieces: 4,
+                    priority: 0,
+                    comment: "Quicken"
+                },
+                {
+                    name: "Emblem Of Severed Fate",
+                    pieces: 2,
+                    priority: 1,
+                },
+                {
+                    name: "Gladiator's Finale",
+                    pieces: 2,
+                    priority: 1,
+                },
+                {
+                    name: "Wanderer's Troupe",
+                    pieces: 2,
+                    priority: 1,
+                },
+                {
+                    name: "Thundering Fury",
+                    pieces: 2,
+                    priority: 1,
+                },
+            ],
+            mainStats: {
+                sands: ["ATK%", "EM"],
+                goblet: ["Electro%"],
+                circlet: ["CRIT"]
+            },
+            subStats: ["ER", "CRIT", "ATK%", "EM"]
+        }
+    ],
+    Yanfei: [
+        {
+            playstyle: "On-Field DPS",
+            patch: "4.5",
+            infographic: "https://keqingmains.com/wp-content/uploads/2024/04/Yanfei-Infographic-4.5.png",
+            sets: [
+                {
+                    name: "Crimson Witch Of Flames",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Gilded Dreams",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Wanderer's Troupe",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Marechaussee Hunter",
+                    pieces: 4,
+                    priority: 0,
+                    comment: "With Furina"
+                },
+            ],
+            mainStats: {
+                sands: ["EM", "ATK%"],
+                goblet: ["Pyro%"],
+                circlet: ["CRIT"]
+            },
+            subStats: ["CRIT", "EM", "ATK%"]
+        }
+    ],
+    Yaoyao: [
+        {
+            playstyle: "Healer",
+            patch: "5.2",
+            infographic: "https://keqingmains.com/wp-content/uploads/2024/12/Yaoyao_5.2_-_cote.png",
+            sets: [
+                {
+                    name: "Deepwood Memories",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Tenacity Of The Millelith",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Instructor",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Scroll Of The Hero Of Cinder City",
+                    pieces: 4,
+                    priority: 0,
+                },
+            ],
+            mainStats: {
+                sands: ["HP%", "ER"],
+                goblet: ["HP%"],
+                circlet: ["Heal%", "HP%"]
+            },
+            subStats: ["ER", "HP%", "EM"]
+        }
+    ],
+    Yoimiya: [
+        {
+            playstyle: "On-Field DPS",
+            patch: "5.0",
+            infographic: "https://keqingmains.com/wp-content/uploads/2024/04/Yoimiya_5.0_-_cote.png",
+            sets: [
+                {
+                    name: "Shimenawa's Reminiscence",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Echoes Of An Offering",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Crimson Witch Of Flames",
+                    pieces: 4,
+                    priority: 0,
+                    comment: "Vaporize"
+                },
+                {
+                    name: "Marechaussee Hunter",
+                    pieces: 4,
+                    priority: 0,
+                    comment: "With Furina"
+                },
+            ],
+            mainStats: {
+                sands: ["ATK%", "EM"],
+                goblet: ["Pyro%"],
+                circlet: ["CRIT"]
+            },
+            subStats: ["CRIT", "ATK%", "EM"]
+        }
+    ],
+    "Yun Jin": [
+        {
+            playstyle: "Normal Attack Buffer",
+            patch: "4.4",
+            infographic: "https://keqingmains.com/wp-content/uploads/2024/02/Yun-Jin-Infographic-4.4.png",
+            sets: [
+                {
+                    name: "Husk Of Opulent Dreams",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Husk Of Opulent Dreams",
+                    pieces: 2,
+                    priority: 0,
+                },
+                {
+                    name: "Emblem Of Severed Fate",
+                    pieces: 2,
+                    priority: 0,
+                },
+                {
+                    name: "Noblesse Oblige",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Archaic Petra",
+                    pieces: 4,
+                    priority: 0,
+                },
+            ],
+            mainStats: {
+                sands: ["DEF%", "ER"],
+                goblet: ["DEF%"],
+                circlet: ["DEF%"]
+            },
+            subStats: ["ER", "CRate", "DEF%"]
+        }
+    ],
+    Zhongli: [
+        {
+            playstyle: "Off-Field Shielder",
+            patch: "5.2",
+            infographic: "https://keqingmains.com/wp-content/uploads/2024/12/Zhongli-Infographic.png",
+            sets: [
+                {
+                    name: "Scroll Of The Hero Of Cinder City",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Archaic Petra",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Tenacity Of The Millelith",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Tenacity Of The Millelith",
+                    pieces: 2,
+                    priority: 0,
+                },
+                {
+                    name: "Vourukasha's Glow",
+                    pieces: 2,
+                    priority: 0,
+                },
+                {
+                    name: "Instructor",
+                    pieces: 4,
+                    priority: 0,
+                },
+            ],
+            mainStats: {
+                sands: ["HP%"],
+                goblet: ["HP%"],
+                circlet: ["HP%", "CRate"]
+            },
+            subStats: ["CRate", "HP%"]
+        }
+    ],
+    Bennet: [
+        {
+            playstyle: "Support",
+            patch: "5.0",
+            infographic: "https://keqingmains.com/wp-content/uploads/2024/09/Bennett_5.0_-_cote_UPDATED-1.png",
+            sets: [
+                {
+                    name: "Noblesse Oblige",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Instructor",
+                    pieces: 4,
+                    priority: 0,
+                    comment: "Reaction Teams"
+                },
+                {
+                    name: "Scroll Of The Hero Of Cinder City",
+                    pieces: 4,
+                    priority: 0,
+                },
+            ],
+            mainStats: {
+                sands: ["ER", "HP%"],
+                goblet: ["HP%"],
+                circlet: ["Heal%", "HP%"]
+            },
+            subStats: ["ER", "HP%"]
+        }
+    ],
+    Candace: [
+        {
+            playstyle: "On-Field DPS",
+            patch: "5.1",
+            infographic: "https://keqingmains.com/wp-content/uploads/2024/10/Candace-On-Field-DPS-Infographic-1.png",
+            sets: [
+                {
+                    name: "Nymph's Dream",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Gladiator's Finale",
+                    pieces: 2,
+                    priority: 1,
+                },
+                {
+                    name: "Heart Of Depth",
+                    pieces: 2,
+                    priority: 1,
+                },
+                {
+                    name: "Emblem Of Severed Fate",
+                    pieces: 2,
+                    priority: 2,
+                },
+                {
+                    name: "Vourukasha's Glow",
+                    pieces: 2,
+                    priority: 2,
+                },
+            ],
+            mainStats: {
+                sands: ["ATK%", "ER"],
+                goblet: ["Hydro%"],
+                circlet: ["CRIT"]
+            },
+            subStats: ["ER", "CRIT", "ATK%", "HP%"]
+        },
+        {
+            playstyle: "Hydro Enabler | Support",
+            patch: "5.1",
+            infographic: "https://keqingmains.com/wp-content/uploads/2024/11/Candace-Support-Infographic-5.1.png",
+            sets: [
+                {
+                    name: "Scroll Of The Hero Of Cinder City",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Emblem Of Severed Fate",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Instructor",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Vourukasha's Glow",
+                    pieces: 2,
+                    priority: 0,
+                },
+                {
+                    name: "Emblem Of Severed Fate",
+                    pieces: 2,
+                    priority: 0,
+                },
+            ],
+            mainStats: {
+                sands: ["HP%", "ER"],
+                goblet: ["HP%"],
+                circlet: ["HP%", "CRIT"]
+            },
+            subStats: ["ER", "CRate", "CDMG"]
+        }
+    ],
+    Collei: [
+        {
+            playstyle: "Off-Field Support",
+            patch: "5.1",
+            infographic: "https://keqingmains.com/wp-content/uploads/2024/11/Collei-Infographic-5.1.png",
+            sets: [
+                {
+                    name: "Deepwood Memories",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Instructor",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Noblesse Oblige",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Scroll Of The Hero Of Cinder City",
+                    pieces: 4,
+                    priority: 0,
+                },
+            ],
+            mainStats: {
+                sands: ["ER", "ATK%", "EM"],
+                goblet: ["Dendro%", "EM"],
+                circlet: ["CRIT", "EM"]
+            },
+            subStats: ["ER", "CRIT", "EM", "ATK%"]
+        }
+    ],
+    "Dendro Traveler": [
+        {
+            playstyle: "Off-Field Enabler",
+            patch: "3.7",
+            infographic: "https://keqingmains.com/wp-content/uploads/2023/07/DMC_1.png",
+            sets: [
+                {
+                    name: "Deepwood Memories",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Noblesse Oblige",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Emblem Of Severed Fate",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Gilded Dreams",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Instructor",
+                    pieces: 4,
+                    priority: 0,
+                },
+            ],
+            mainStats: {
+                sands: ["ER", "EM", "ATK%"],
+                goblet: ["Dendro%"],
+                circlet: ["CRate"]
+            },
+            subStats: ["ER", "CRate", "EM", "ATK%"]
+        }
+    ],
+    Diona: [
+        {
+            playstyle: "Support",
+            patch: "4.4",
+            infographic: "https://keqingmains.com/wp-content/uploads/2022/10/Diona-Infographic-4.4.png",
+            sets: [
+                {
+                    name: "Noblesse Oblige",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Tenacity Of The Millelith",
+                    pieces: 2,
+                    priority: 0,
+                },
+                {
+                    name: "Ocean-Hued Clam",
+                    pieces: 2,
+                    priority: 0,
+                },
+            ],
+            mainStats: {
+                sands: ["HP%", "ER"],
+                goblet: ["HP%"],
+                circlet: ["HP%", "Heal%", "CRate"]
+            },
+            subStats: ["ER", "HP%", "CRate"]
+        }
+    ],
+    "Electro Traveler": [
+        {
+            playstyle: "Battery",
+            patch: "2.4",
+            infographic: "https://keqingmains.com/wp-content/uploads/2022/11/EMC-min.png",
+            sets: [
+                {
+                    name: "Emblem Of Severed Fate",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Noblesse Oblige",
+                    pieces: 4,
+                    priority: 1,
+                },
+            ],
+            mainStats: {
+                sands: ["ER"],
+                goblet: ["Electro%"],
+                circlet: ["CRate"]
+            },
+            subStats: ["ER", "CRate"]
+        }
+    ],
+    "Geo Traveler": [
+        {
+            playstyle: "Quickswap DPS | Support",
+            patch: "2.6",
+            infographic: "https://keqingmains.com/wp-content/uploads/2022/11/GMC-min.png",
+            sets: [
+                {
+                    name: "Gladiator's Finale",
+                    pieces: 2,
+                    priority: 0,
+                },
+                {
+                    name: "Shimenawa's Reminiscence",
+                    pieces: 2,
+                    priority: 0,
+                },
+                {
+                    name: "Archaic Petra",
+                    pieces: 2,
+                    priority: 0,
+                },
+                {
+                    name: "Noblesse Oblige",
+                    pieces: 2,
+                    priority: 0,
+                },
+                {
+                    name: "Husk Of Opulent Dreams",
+                    pieces: 4,
+                    priority: 1,
+                },
+                {
+                    name: "Lavawalker",
+                    pieces: 4,
+                    priority: 1,
+                },
+                {
+                    name: "Thundersoother",
+                    pieces: 4,
+                    priority: 1,
+                },
+                {
+                    name: "Noblesse Oblige",
+                    pieces: 4,
+                    priority: 1,
+                },
+            ],
+            mainStats: {
+                sands: ["ATK%"],
+                goblet: ["Geo%"],
+                circlet: ["CRIT"]
+            },
+            subStats: ["ER", "CRIT", "ATK%"]
+        }
+    ],
+    Gorou: [
+        {
+            playstyle: "Support",
+            patch: "4.5",
+            infographic: "https://keqingmains.com/wp-content/uploads/2024/04/Gorou-Infographic-4.5.png",
+            sets: [
+                {
+                    name: "Noblesse Oblige",
+                    pieces: 4,
+                    priority: 0,
+                },
+                // the exile
+            ],
+            mainStats: {
+                sands: ["ER"],
+                goblet: [],
+                circlet: ["CRate"]
+            },
+            subStats: ["ER", "CRate"]
+        }
+    ],
+    Mika: [
+        {
+            playstyle: "Healer | Buffer",
+            patch: "4.5",
+            infographic: "https://keqingmains.com/wp-content/uploads/2024/04/Mika-Infographic-4.5.png",
+            sets: [
+                {
+                    name: "Noblesse Oblige",
+                    pieces: 4,
+                    priority: 0,
+                },
+                {
+                    name: "Ocean-Hued Clam",
+                    pieces: 4,
+                    priority: 1,
+                },
+                {
+                    name: "Song Of Days Past",
+                    pieces: 4,
+                    priority: 1,
+                },
+                // the exile
+            ],
+            mainStats: {
+                sands: ["ER", "HP%"],
+                goblet: ["HP%"],
+                circlet: ["Heal%", "CRate"]
+            },
+            subStats: ["ER", "CRate", "HP%"]
+        }
+    ],
+    Ororon: [
+        {
+            playstyle: "Off-Field DPS | Support",
+            patch: "5.2",
+            infographic: "https://keqingmains.com/wp-content/uploads/2024/11/Ororon-Infographic-5.2.png",
+            sets: [
+                {
+                    name: "Scroll Of The Hero Of Cinder City",
+                    pieces: 4,
+                    priority: 0,
+                },
+            ],
+            mainStats: {
+                sands: ["ATK%", "ER"],
+                goblet: ["Electro%"],
+                circlet: ["CRIT"]
+            },
+            subStats: ["ER", "CRIT", "ATK%"]
+        }
+    ],
+    "Kujou Sara": [
+        {
+            playstyle: "Off-Field Support & DPS",
+            patch: "5.0",
+            infographic: "https://keqingmains.com/wp-content/uploads/2024/09/Kujou_Sara_5.0_-_cote__euphorysm.png",
+            sets: [
+                {
+                    name: "Emblem Of Severed Fate",
+                    pieces: 4,
+                    priority: 0,
+                    comment: "Damage"
+                },
+                {
+                    name: "Noblesse Oblige",
+                    pieces: 4,
+                    priority: 0,
+                    comment: "Support"
+                },
+                {
+                    name: "Scroll Of The Hero Of Cinder City",
+                    pieces: 4,
+                    priority: 0,
+                    comment: "Support"
+                },
+            ],
+            mainStats: {
+                sands: ["ER", "ATK%"],
+                goblet: ["Electro%"],
+                circlet: ["CRIT"]
+            },
+            subStats: ["ER", "CRIT", "ATK%"]
         }
     ],
 }
