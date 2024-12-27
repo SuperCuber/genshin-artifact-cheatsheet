@@ -4260,4 +4260,62 @@ export const builds: Partial<Builds> = {
             subStats: ["ER", "CRIT", "ATK%"]
         }
     ],
+    Mavuika: [
+        {
+            playstyle: "On Field DPS",
+            patch: "5.2",
+            infographic: "N/A",
+            sets: [
+                {
+                    name: "Obsidian Codex",
+                    pieces: 4,
+                    priority: 0,
+                },
+            ],
+            mainStats: {
+                sands: ["ATK%"],
+                goblet: ["Pyro%"],
+                circlet: ["CRIT"]
+            },
+            subStats: ["CRIT", "ATK%", "EM"]
+        },
+        {
+            playstyle: "Off-Field DPS",
+            patch: "5.2",
+            infographic: "N/A",
+            sets: [
+                {
+                    name: "Scroll Of The Hero Of Cinder City",
+                    pieces: 4,
+                    priority: 0,
+                },
+            ],
+            mainStats: {
+                sands: ["ATK%"],
+                goblet: ["Pyro%"],
+                circlet: ["CRIT"]
+            },
+            subStats: ["CRIT", "ATK%", "EM"]
+        }
+    ],
+    Citlali: [
+        {
+            playstyle: "Support",
+            patch: "5.2",
+            infographic: "N/A",
+            sets: [
+                {
+                    name: "Scroll Of The Hero Of Cinder City",
+                    pieces: 4,
+                    priority: 0,
+                },
+            ],
+            mainStats: {
+                sands: ["EM"],
+                goblet: ["EM"],
+                circlet: ["EM"]
+            },
+            subStats: ["ER", "EM", "ATK%"]
+        }
+    ]
 }
