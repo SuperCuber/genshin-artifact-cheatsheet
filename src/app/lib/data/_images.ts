@@ -30,6 +30,7 @@ import ScrollOfTheHeroOfCinderCity from '/public/icons/artifacts/Scroll Of The H
 import ShimenawasReminiscence from '/public/icons/artifacts/Shimenawa\'s Reminiscence.png';
 import SongOfDaysPast from '/public/icons/artifacts/Song Of Days Past.png';
 import TenacityOfTheMillelith from '/public/icons/artifacts/Tenacity Of The Millelith.png';
+import TheExile from '/public/icons/artifacts/The Exile.png';
 import ThunderingFury from '/public/icons/artifacts/Thundering Fury.png';
 import Thundersoother from '/public/icons/artifacts/Thundersoother.png';
 import UnfinishedReverie from '/public/icons/artifacts/Unfinished Reverie.png';
@@ -68,6 +69,7 @@ export const artifacts = {
   ['Shimenawa\'s Reminiscence']: ShimenawasReminiscence,
   ['Song Of Days Past']: SongOfDaysPast,
   ['Tenacity Of The Millelith']: TenacityOfTheMillelith,
+  ['The Exile']: TheExile,
   ['Thundering Fury']: ThunderingFury,
   ['Thundersoother']: Thundersoother,
   ['Unfinished Reverie']: UnfinishedReverie,
@@ -156,6 +158,7 @@ import Rosaria from '/public/icons/characters/Rosaria.png';
 import SangonomiyaKokomi from '/public/icons/characters/Sangonomiya Kokomi.png';
 import Sayu from '/public/icons/characters/Sayu.png';
 import Sethos from '/public/icons/characters/Sethos.png';
+import Shenhe from '/public/icons/characters/Shenhe.png';
 import Sigewinne from '/public/icons/characters/Sigewinne.png';
 import Sucrose from '/public/icons/characters/Sucrose.png';
 import Tartaglia from '/public/icons/characters/Tartaglia.png';
@@ -168,10 +171,12 @@ import Xiangling from '/public/icons/characters/Xiangling.png';
 import Xianyun from '/public/icons/characters/Xianyun.png';
 import Xiao from '/public/icons/characters/Xiao.png';
 import Xilonen from '/public/icons/characters/Xilonen.png';
+import Xingqiu from '/public/icons/characters/Xingqiu.png';
 import Xinyan from '/public/icons/characters/Xinyan.png';
 import YaeMiko from '/public/icons/characters/Yae Miko.png';
 import Yanfei from '/public/icons/characters/Yanfei.png';
 import Yaoyao from '/public/icons/characters/Yaoyao.png';
+import Yelan from '/public/icons/characters/Yelan.png';
 import Yoimiya from '/public/icons/characters/Yoimiya.png';
 import YunJin from '/public/icons/characters/Yun Jin.png';
 import Zhongli from '/public/icons/characters/Zhongli.png';
@@ -254,6 +259,7 @@ export const characters = {
   ['Sangonomiya Kokomi']: SangonomiyaKokomi,
   ['Sayu']: Sayu,
   ['Sethos']: Sethos,
+  ['Shenhe']: Shenhe,
   ['Sigewinne']: Sigewinne,
   ['Sucrose']: Sucrose,
   ['Tartaglia']: Tartaglia,
@@ -266,10 +272,12 @@ export const characters = {
   ['Xianyun']: Xianyun,
   ['Xiao']: Xiao,
   ['Xilonen']: Xilonen,
+  ['Xingqiu']: Xingqiu,
   ['Xinyan']: Xinyan,
   ['Yae Miko']: YaeMiko,
   ['Yanfei']: Yanfei,
   ['Yaoyao']: Yaoyao,
+  ['Yelan']: Yelan,
   ['Yoimiya']: Yoimiya,
   ['Yun Jin']: YunJin,
   ['Zhongli']: Zhongli
