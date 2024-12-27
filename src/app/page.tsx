@@ -9,8 +9,13 @@ import CharacterFilter from "./ui/CharacterFilter";
 export default function Home() {
     const artifacts = groupByArtifact(builds);
 
-    const [selectedCharacters, setSelectedCharacters] = React.useState<Character[]>(JSON.parse(window.localStorage.getItem("selectedCharacters") || "null") || allCharacters);
+    const [selectedCharacters, setSelectedCharacters] = React.useState<Character[]>([]);
     const [filteredArtifacts, setFilteredArtifacts] = React.useState(artifacts);
+
+    useEffect(() => {
+        // Using localStorage -> must be in useEffect
+        setSelectedCharacters(JSON.parse(localStorage.getItem("selectedCharacters") || "null") || allCharacters)
+    }, []);
 
     useEffect(() => {
         const entries = Object.entries(artifacts);
@@ -20,7 +25,7 @@ export default function Home() {
     }, [selectedCharacters, artifacts]);
 
     useEffect(() => {
-        window.localStorage.setItem("selectedCharacters", JSON.stringify(selectedCharacters));
+        localStorage.setItem("selectedCharacters", JSON.stringify(selectedCharacters));
     }, [selectedCharacters]);
 
     return (
