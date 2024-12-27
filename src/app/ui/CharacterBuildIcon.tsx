@@ -9,7 +9,7 @@ interface CharacterBuildIconProps {
 }
 
 // TODO: multiple playstyles of the same character and set need to go into the same icon. accept build[]
-const CharacterBuildIcon: React.FC<CharacterBuildIconProps> = ({ character, builds }) => {
+const CharacterBuildIcon: React.FC<CharacterBuildIconProps> = ({ character, builds: _ }) => {
     return (
         <Image src={characterIcons[character]} alt={character} width={64} height={64} />
     );

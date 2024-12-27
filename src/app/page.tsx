@@ -6,12 +6,6 @@ import ArtifactBuilds from "./ui/ArtifactBuilds";
 import React, { useEffect } from "react";
 import CharacterFilter from "./ui/CharacterFilter";
 
-interface Filters {
-    // TODO: implement dis
-    selectedCharacters: Character[];
-    minimumPriority: number;
-}
-
 export default function Home() {
     const artifacts = groupByArtifact(builds);
 
@@ -19,11 +13,11 @@ export default function Home() {
     const [filteredArtifacts, setFilteredArtifacts] = React.useState(artifacts);
 
     useEffect(() => {
-        let entries = Object.entries(artifacts);
-        let filtered = entries.map(([set, builds]) =>
+        const entries = Object.entries(artifacts);
+        const filtered = entries.map(([set, builds]) =>
             [set, builds.filter(b => selectedCharacters.includes(b.character))]);
         setFilteredArtifacts(Object.fromEntries(filtered));
-    }, [selectedCharacters]);
+    }, [selectedCharacters, artifacts]);
 
     useEffect(() => {
         localStorage.setItem("selectedCharacters", JSON.stringify(selectedCharacters));
