@@ -9,7 +9,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/04/Albedo-Infographic-4.5.png",
             sets: [
                 {
-                    name: "Husk Of Opulent Dreams",
+                    name: "Husk of Opulent Dreams",
                     pieces: 4,
                     priority: 0,
                 },
@@ -19,7 +19,7 @@ export const builds: Partial<Builds> = {
                     priority: 1,
                 },
                 {
-                    name: "Husk Of Opulent Dreams",
+                    name: "Husk of Opulent Dreams",
                     pieces: 2,
                     priority: 2,
                 },
@@ -64,7 +64,7 @@ export const builds: Partial<Builds> = {
                     priority: 1,
                 },
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 2,
                     priority: 1,
                 },
@@ -108,7 +108,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/04/Aloy-Melt-Infographic-4.5.png",
             sets: [
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 4,
                     priority: 0,
                 },
@@ -176,7 +176,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2023/08/Amber_Burgeon_1.png",
             sets: [
                 {
-                    name: "Flower Of Paradise Lost",
+                    name: "Flower of Paradise Lost",
                     pieces: 4,
                     priority: 0,
                 },
@@ -209,7 +209,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2023/08/Amber_C4_Melt_1.png",
             sets: [
                 {
-                    name: "Crimson Witch Of Flames",
+                    name: "Crimson Witch of Flames",
                     pieces: 4,
                     priority: 0,
                 },
@@ -219,7 +219,7 @@ export const builds: Partial<Builds> = {
                     priority: 1,
                 },
                 {
-                    name: "Crimson Witch Of Flames",
+                    name: "Crimson Witch of Flames",
                     pieces: 2,
                     priority: 2,
                 },
@@ -257,7 +257,7 @@ export const builds: Partial<Builds> = {
                     priority: 1,
                 },
                 {
-                    name: "Crimson Witch Of Flames",
+                    name: "Crimson Witch of Flames",
                     pieces: 2,
                     priority: 2,
                 },
@@ -327,7 +327,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/04/Arlecchino-Infographic-4.6-Updated.png",
             sets: [
                 {
-                    name: "Fragment Of Harmonic Whimsy",
+                    name: "Fragment of Harmonic Whimsy",
                     pieces: 4,
                     priority: 0,
                 },
@@ -337,7 +337,7 @@ export const builds: Partial<Builds> = {
                     priority: 1,
                 },
                 {
-                    name: "Echoes Of An Offering",
+                    name: "Echoes of An Offering",
                     pieces: 4,
                     priority: 2,
                     comment: "<100 Ping"
@@ -378,7 +378,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/01/Ayato_4.8_-_ang_tahimik__cote.png",
             sets: [
                 {
-                    name: "Heart Of Depth",
+                    name: "Heart of Depth",
                     pieces: 4,
                     priority: 0,
                 },
@@ -393,7 +393,7 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Echoes Of An Offering",
+                    name: "Echoes of An Offering",
                     pieces: 4,
                     priority: 0,
                 },
@@ -459,12 +459,12 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Scroll Of The Hero Of Cinder City",
+                    name: "Scroll of the Hero of Cinder City",
                     pieces: 4,
                     priority: 0,
                 },
                 {
-                    name: "Flower Of Paradise Lost",
+                    name: "Flower of Paradise Lost",
                     pieces: 4,
                     priority: 0,
                 },
@@ -489,7 +489,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/01/Beidou_4.8_-_kol-1.png",
             sets: [
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 4,
                     priority: 0,
                 },
@@ -499,7 +499,7 @@ export const builds: Partial<Builds> = {
                     priority: 1,
                 },
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 2,
                     priority: 2,
                 },
@@ -539,7 +539,7 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Tenacity Of The Millelith",
+                    name: "Tenacity of the Millelith",
                     pieces: 4,
                     priority: 0,
                 },
@@ -549,7 +549,7 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Song Of Days Past",
+                    name: "Song of Days Past",
                     pieces: 4,
                     priority: 0,
                 },
@@ -595,7 +595,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/09/Chevreuse_Support__Quickswap_DPS_5.0_-_cote.png",
             sets: [
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 4,
                     priority: 0,
                 },
@@ -610,7 +610,7 @@ export const builds: Partial<Builds> = {
                     priority: 2,
                 },
                 {
-                    name: "Crimson Witch Of Flames",
+                    name: "Crimson Witch of Flames",
                     pieces: 2,
                     priority: 2,
                 },
@@ -620,12 +620,12 @@ export const builds: Partial<Builds> = {
                     priority: 2,
                 },
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 2,
                     priority: 2,
                 },
                 {
-                    name: "Scroll Of The Hero Of Cinder City",
+                    name: "Scroll of the Hero of Cinder City",
                     pieces: 4,
                     priority: 3,
                 },
@@ -648,12 +648,12 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Scroll Of The Hero Of Cinder City",
+                    name: "Scroll of the Hero of Cinder City",
                     pieces: 4,
                     priority: 0,
                 },
                 {
-                    name: "Song Of Days Past",
+                    name: "Song of Days Past",
                     pieces: 4,
                     priority: 0,
                 },
@@ -663,12 +663,12 @@ export const builds: Partial<Builds> = {
                     priority: 1,
                 },
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 2,
                     priority: 1,
                 },
                 {
-                    name: "Tenacity Of The Millelith",
+                    name: "Tenacity of the Millelith",
                     pieces: 2,
                     priority: 1,
                 },
@@ -693,7 +693,7 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Husk Of Opulent Dreams",
+                    name: "Husk of Opulent Dreams",
                     pieces: 4,
                     priority: 1,
                 },
@@ -703,7 +703,7 @@ export const builds: Partial<Builds> = {
                     priority: 2,
                 },
                 {
-                    name: "Husk Of Opulent Dreams",
+                    name: "Husk of Opulent Dreams",
                     pieces: 2,
                     priority: 2,
                 },
@@ -738,7 +738,7 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 4,
                     priority: 0,
                 },
@@ -753,7 +753,7 @@ export const builds: Partial<Builds> = {
                     priority: 1,
                 },
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 2,
                     priority: 1,
                 },
@@ -778,7 +778,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/06/Clorinde-Infographic-4.7-Updated.png",
             sets: [
                 {
-                    name: "Fragment Of Harmonic Whimsy",
+                    name: "Fragment of Harmonic Whimsy",
                     pieces: 4,
                     priority: 0,
                 },
@@ -818,7 +818,7 @@ export const builds: Partial<Builds> = {
                     priority: 1,
                 },
                 {
-                    name: "Flower Of Paradise Lost",
+                    name: "Flower of Paradise Lost",
                     pieces: 4,
                     priority: 2,
                 },
@@ -848,12 +848,12 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Flower Of Paradise Lost",
+                    name: "Flower of Paradise Lost",
                     pieces: 4,
                     priority: 0,
                 },
                 {
-                    name: "Flower Of Paradise Lost",
+                    name: "Flower of Paradise Lost",
                     pieces: 2,
                     priority: 1,
                 },
@@ -881,7 +881,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/04/Dehya-On-Field-DPS-Infographic-4.5.png",
             sets: [
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 4,
                     priority: 0,
                 },
@@ -910,7 +910,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/04/Dehya-Support-Infographic-4.5.png",
             sets: [
                 {
-                    name: "Tenacity Of The Millelith",
+                    name: "Tenacity of the Millelith",
                     pieces: 4,
                     priority: 0,
                 },
@@ -940,7 +940,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2023/12/Diluc_5.0_-_cote.png",
             sets: [
                 {
-                    name: "Crimson Witch Of Flames",
+                    name: "Crimson Witch of Flames",
                     pieces: 4,
                     priority: 0,
                 },
@@ -981,7 +981,7 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 2,
                     priority: 1,
                 },
@@ -1020,7 +1020,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/10/Dori-Hyperbloom-Infographic.png",
             sets: [
                 {
-                    name: "Flower Of Paradise Lost",
+                    name: "Flower of Paradise Lost",
                     pieces: 4,
                     priority: 0,
                 },
@@ -1053,12 +1053,12 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Tenacity Of The Millelith",
+                    name: "Tenacity of the Millelith",
                     pieces: 2,
                     priority: 0,
                 },
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 2,
                     priority: 0,
                 },
@@ -1078,7 +1078,7 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Scroll Of The Hero Of Cinder City",
+                    name: "Scroll of the Hero of Cinder City",
                     pieces: 4,
                     priority: 0,
                 },
@@ -1138,7 +1138,7 @@ export const builds: Partial<Builds> = {
                     priority: 1,
                 },
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 2,
                     priority: 1,
                 },
@@ -1169,12 +1169,12 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/04/Faruzan_5.0_-_kol.png",
             sets: [
                 {
-                    name: "Tenacity Of The Millelith",
+                    name: "Tenacity of the Millelith",
                     pieces: 4,
                     priority: 0,
                 },
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 4,
                     priority: 0,
                 },
@@ -1239,7 +1239,7 @@ export const builds: Partial<Builds> = {
                     priority: 2,
                 },
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 2,
                     priority: 2,
                 },
@@ -1277,7 +1277,7 @@ export const builds: Partial<Builds> = {
                     priority: 1,
                 },
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 2,
                     priority: 1,
                 },
@@ -1307,7 +1307,7 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Tenacity Of The Millelith",
+                    name: "Tenacity of the Millelith",
                     pieces: 4,
                     priority: 0,
                 },
@@ -1327,7 +1327,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/01/Gaming-Infographic-5.2.png",
             sets: [
                 {
-                    name: "Crimson Witch Of Flames",
+                    name: "Crimson Witch of Flames",
                     pieces: 4,
                     priority: 0,
                 },
@@ -1503,7 +1503,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2023/01/Hu_Tao_5.1_-_icedsquid.png",
             sets: [
                 {
-                    name: "Crimson Witch Of Flames",
+                    name: "Crimson Witch of Flames",
                     pieces: 4,
                     priority: 0,
                 },
@@ -1554,7 +1554,7 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Tenacity Of The Millelith",
+                    name: "Tenacity of the Millelith",
                     pieces: 4,
                     priority: 0,
                 },
@@ -1574,12 +1574,12 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/04/Itto-Infographic-4.5.png",
             sets: [
                 {
-                    name: "Husk Of Opulent Dreams",
+                    name: "Husk of Opulent Dreams",
                     pieces: 4,
                     priority: 0,
                 },
                 {
-                    name: "Husk Of Opulent Dreams",
+                    name: "Husk of Opulent Dreams",
                     pieces: 2,
                     priority: 2,
                 },
@@ -1657,7 +1657,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/11/Kachina-Infographic-5.1.png",
             sets: [
                 {
-                    name: "Scroll Of The Hero Of Cinder City",
+                    name: "Scroll of the Hero of Cinder City",
                     pieces: 4,
                     priority: 0,
                 },
@@ -1692,7 +1692,7 @@ export const builds: Partial<Builds> = {
                     priority: 1,
                 },
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 4,
                     priority: 2,
                 },
@@ -1710,7 +1710,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2022/11/Kaeya_1.png",
             sets: [
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 4,
                     priority: 0,
                 },
@@ -1862,7 +1862,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/01/Kirara_4.8_-_cote.png",
             sets: [
                 {
-                    name: "Tenacity Of The Millelith",
+                    name: "Tenacity of the Millelith",
                     pieces: 2,
                     priority: 0,
                 },
@@ -1907,7 +1907,7 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Flower Of Paradise Lost",
+                    name: "Flower of Paradise Lost",
                     pieces: 4,
                     priority: 0,
                 },
@@ -1917,7 +1917,7 @@ export const builds: Partial<Builds> = {
                     priority: 1,
                 },
                 {
-                    name: "Flower Of Paradise Lost",
+                    name: "Flower of Paradise Lost",
                     pieces: 2,
                     priority: 1,
                 },
@@ -1940,7 +1940,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/07/Klee_On-field_4.7_-_ang_tahimik.png",
             sets: [
                 {
-                    name: "Crimson Witch Of Flames",
+                    name: "Crimson Witch of Flames",
                     pieces: 2,
                     priority: 0,
                 },
@@ -1950,7 +1950,7 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Crimson Witch Of Flames",
+                    name: "Crimson Witch of Flames",
                     pieces: 4,
                     priority: 0,
                 },
@@ -1975,7 +1975,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/10/Kokomi-Bloom-Infographic.png",
             sets: [
                 {
-                    name: "Flower Of Paradise Lost",
+                    name: "Flower of Paradise Lost",
                     pieces: 4,
                     priority: 0,
                 },
@@ -2013,7 +2013,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/11/Kokomi-Support-Infographic-5.1.png",
             sets: [
                 {
-                    name: "Tenacity Of The Millelith",
+                    name: "Tenacity of the Millelith",
                     pieces: 4,
                     priority: 0,
                 },
@@ -2023,7 +2023,7 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Scroll Of The Hero Of Cinder City",
+                    name: "Scroll of the Hero of Cinder City",
                     pieces: 4,
                     priority: 0,
                 },
@@ -2071,12 +2071,12 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Tenacity Of The Millelith",
+                    name: "Tenacity of the Millelith",
                     pieces: 4,
                     priority: 1,
                 },
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 4,
                     priority: 2,
                 },
@@ -2086,7 +2086,7 @@ export const builds: Partial<Builds> = {
                     priority: 3,
                 },
                 {
-                    name: "Tenacity Of The Millelith",
+                    name: "Tenacity of the Millelith",
                     pieces: 4,
                     priority: 3,
                 },
@@ -2104,12 +2104,12 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/12/Layla-Shielder-Infog-5.2.png",
             sets: [
                 {
-                    name: "Scroll Of The Hero Of Cinder City",
+                    name: "Scroll of the Hero of Cinder City",
                     pieces: 4,
                     priority: 0,
                 },
                 {
-                    name: "Tenacity Of The Millelith",
+                    name: "Tenacity of the Millelith",
                     pieces: 4,
                     priority: 1,
                 },
@@ -2135,7 +2135,7 @@ export const builds: Partial<Builds> = {
                     comment: "Support"
                 },
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 4,
                     priority: 0,
                 },
@@ -2145,7 +2145,7 @@ export const builds: Partial<Builds> = {
                     priority: 1,
                 },
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 2,
                     priority: 1,
                 },
@@ -2267,7 +2267,7 @@ export const builds: Partial<Builds> = {
                     comment: "With Xiao"
                 },
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 4,
                     priority: 0,
                     comment: "Damage"
@@ -2298,7 +2298,7 @@ export const builds: Partial<Builds> = {
                     priority: 2,
                 },
                 {
-                    name: "Crimson Witch Of Flames",
+                    name: "Crimson Witch of Flames",
                     pieces: 2,
                     priority: 2,
                 },
@@ -2333,7 +2333,7 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Tenacity Of The Millelith",
+                    name: "Tenacity of the Millelith",
                     pieces: 4,
                     priority: 0,
                 },
@@ -2388,12 +2388,12 @@ export const builds: Partial<Builds> = {
                     priority: 1,
                 },
                 {
-                    name: "Scroll Of The Hero Of Cinder City",
+                    name: "Scroll of the Hero of Cinder City",
                     pieces: 4,
                     priority: 1,
                 },
                 {
-                    name: "Tenacity Of The Millelith",
+                    name: "Tenacity of the Millelith",
                     pieces: 4,
                     priority: 1,
                 },
@@ -2413,7 +2413,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2023/12/Navia_4.6_update_-_euphorysm.png",
             sets: [
                 {
-                    name: "Nighttime Whispers In The Echoing Woods",
+                    name: "Nighttime Whispers In the Echoing Woods",
                     pieces: 4,
                     priority: 0,
                 },
@@ -2438,7 +2438,7 @@ export const builds: Partial<Builds> = {
                     priority: 2,
                 },
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 2,
                     priority: 2,
                 },
@@ -2483,7 +2483,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/01/Nilou_4.8_-_kol__cote.png",
             sets: [
                 {
-                    name: "Tenacity Of The Millelith",
+                    name: "Tenacity of the Millelith",
                     pieces: 2,
                     priority: 0,
                 },
@@ -2493,7 +2493,7 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Tenacity Of The Millelith",
+                    name: "Tenacity of the Millelith",
                     pieces: 2,
                     priority: 1,
                 },
@@ -2503,7 +2503,7 @@ export const builds: Partial<Builds> = {
                     priority: 1,
                 },
                 {
-                    name: "Flower Of Paradise Lost",
+                    name: "Flower of Paradise Lost",
                     pieces: 4,
                     priority: 2,
                 },
@@ -2523,7 +2523,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/11/Ningguang-Infographic-5.2.png",
             sets: [
                 {
-                    name: "Nighttime Whispers In The Echoing Woods",
+                    name: "Nighttime Whispers In the Echoing Woods",
                     pieces: 4,
                     priority: 0,
                 },
@@ -2543,7 +2543,7 @@ export const builds: Partial<Builds> = {
                     priority: 2,
                 },
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 2,
                     priority: 2,
                 },
@@ -2574,7 +2574,7 @@ export const builds: Partial<Builds> = {
                     comment: "With Furina"
                 },
                 {
-                    name: "Husk Of Opulent Dreams",
+                    name: "Husk of Opulent Dreams",
                     pieces: 4,
                     priority: 2,
                 },
@@ -2614,7 +2614,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/02/Raiden_Shogun_Aggravate_5.0_-_euphorysm__squid.png",
             sets: [
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 4,
                     priority: 0,
                 },
@@ -2643,7 +2643,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/02/Raiden_Shogun_Hyperbloom_5.0_-_euphorysm_og__cegewinne_update.png",
             sets: [
                 {
-                    name: "Flower Of Paradise Lost",
+                    name: "Flower of Paradise Lost",
                     pieces: 4,
                     priority: 0,
                 },
@@ -2658,7 +2658,7 @@ export const builds: Partial<Builds> = {
                     priority: 2,
                 },
                 {
-                    name: "Flower Of Paradise Lost",
+                    name: "Flower of Paradise Lost",
                     pieces: 2,
                     priority: 2,
                 },
@@ -2682,7 +2682,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/02/Raiden_Shogun_On-Field_DPS_5.0_-_euphorysm-1.png",
             sets: [
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 4,
                     priority: 0,
                 },
@@ -2779,7 +2779,7 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Flower Of Paradise Lost",
+                    name: "Flower of Paradise Lost",
                     pieces: 4,
                     priority: 0,
                 },
@@ -2794,7 +2794,7 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 2,
                     priority: 0,
                 },
@@ -2848,7 +2848,7 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 4,
                     priority: 0,
                 },
@@ -2976,7 +2976,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/11/Shinobu-Hyperbloom-Infographic.png",
             sets: [
                 {
-                    name: "Flower Of Paradise Lost",
+                    name: "Flower of Paradise Lost",
                     pieces: 4,
                     priority: 0,
                 },
@@ -2986,7 +2986,7 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Flower Of Paradise Lost",
+                    name: "Flower of Paradise Lost",
                     pieces: 2,
                     priority: 0,
                 },
@@ -3014,7 +3014,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/11/Shinobu-Quicken-Infographic.png",
             sets: [
                 {
-                    name: "Tenacity Of The Millelith",
+                    name: "Tenacity of the Millelith",
                     pieces: 4,
                     priority: 0,
                 },
@@ -3029,7 +3029,7 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Scroll Of The Hero Of Cinder City",
+                    name: "Scroll of the Hero of Cinder City",
                     pieces: 4,
                     priority: 0,
                 },
@@ -3054,12 +3054,12 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Song Of Days Past",
+                    name: "Song of Days Past",
                     pieces: 4,
                     priority: 1,
                 },
                 {
-                    name: "Tenacity Of The Millelith",
+                    name: "Tenacity of the Millelith",
                     pieces: 4,
                     priority: 2,
                 },
@@ -3104,7 +3104,7 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Heart Of Depth",
+                    name: "Heart of Depth",
                     pieces: 4,
                     priority: 1,
                 },
@@ -3114,7 +3114,7 @@ export const builds: Partial<Builds> = {
                     priority: 1,
                 },
                 {
-                    name: "Heart Of Depth",
+                    name: "Heart of Depth",
                     pieces: 2,
                     priority: 1,
                 },
@@ -3124,7 +3124,7 @@ export const builds: Partial<Builds> = {
                     priority: 1,
                 },
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 2,
                     priority: 1,
                 },
@@ -3144,7 +3144,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/09/Thoma_Burgeon_5.0_-_cote__euphorysm.png",
             sets: [
                 {
-                    name: "Flower Of Paradise Lost",
+                    name: "Flower of Paradise Lost",
                     pieces: 4,
                     priority: 0,
                 },
@@ -3192,7 +3192,7 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Scroll Of The Hero Of Cinder City",
+                    name: "Scroll of the Hero of Cinder City",
                     pieces: 4,
                     priority: 0,
                 },
@@ -3366,12 +3366,12 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/03/Xiangling_5.0_-_Squid.png",
             sets: [
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 4,
                     priority: 0,
                 },
                 {
-                    name: "Crimson Witch Of Flames",
+                    name: "Crimson Witch of Flames",
                     pieces: 4,
                     priority: 1,
                     comment: "Vaporize"
@@ -3413,7 +3413,7 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Song Of Days Past",
+                    name: "Song of Days Past",
                     pieces: 4,
                     priority: 0,
                 },
@@ -3480,7 +3480,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/10/Xilonen-Infographic.png",
             sets: [
                 {
-                    name: "Scroll Of The Hero Of Cinder City",
+                    name: "Scroll of the Hero of Cinder City",
                     pieces: 4,
                     priority: 0,
                 },
@@ -3521,7 +3521,7 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 2,
                     priority: 0,
                 },
@@ -3536,7 +3536,7 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Husk Of Opulent Dreams",
+                    name: "Husk of Opulent Dreams",
                     pieces: 2,
                     priority: 0,
                 },
@@ -3566,12 +3566,12 @@ export const builds: Partial<Builds> = {
                     comment: "Mono Pyro"
                 },
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 2,
                     priority: 1,
                 },
                 {
-                    name: "Crimson Witch Of Flames",
+                    name: "Crimson Witch of Flames",
                     pieces: 2,
                     priority: 1,
                 },
@@ -3594,12 +3594,12 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/10/Xinyan-Shielder-Infographic.png",
             sets: [
                 {
-                    name: "Tenacity Of The Millelith",
+                    name: "Tenacity of the Millelith",
                     pieces: 4,
                     priority: 0,
                 },
                 {
-                    name: "Scroll Of The Hero Of Cinder City",
+                    name: "Scroll of the Hero of Cinder City",
                     pieces: 4,
                     priority: 1,
                 },
@@ -3609,7 +3609,7 @@ export const builds: Partial<Builds> = {
                     priority: 2,
                 },
                 {
-                    name: "Husk Of Opulent Dreams",
+                    name: "Husk of Opulent Dreams",
                     pieces: 4,
                     priority: 3,
                 },
@@ -3640,7 +3640,7 @@ export const builds: Partial<Builds> = {
                     comment: "Quicken"
                 },
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 2,
                     priority: 1,
                 },
@@ -3675,7 +3675,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/04/Yanfei-Infographic-4.5.png",
             sets: [
                 {
-                    name: "Crimson Witch Of Flames",
+                    name: "Crimson Witch of Flames",
                     pieces: 4,
                     priority: 0,
                 },
@@ -3716,7 +3716,7 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Tenacity Of The Millelith",
+                    name: "Tenacity of the Millelith",
                     pieces: 4,
                     priority: 0,
                 },
@@ -3726,7 +3726,7 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Scroll Of The Hero Of Cinder City",
+                    name: "Scroll of the Hero of Cinder City",
                     pieces: 4,
                     priority: 0,
                 },
@@ -3751,12 +3751,12 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Echoes Of An Offering",
+                    name: "Echoes of An Offering",
                     pieces: 4,
                     priority: 0,
                 },
                 {
-                    name: "Crimson Witch Of Flames",
+                    name: "Crimson Witch of Flames",
                     pieces: 4,
                     priority: 0,
                     comment: "Vaporize"
@@ -3783,17 +3783,17 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/02/Yun-Jin-Infographic-4.4.png",
             sets: [
                 {
-                    name: "Husk Of Opulent Dreams",
+                    name: "Husk of Opulent Dreams",
                     pieces: 4,
                     priority: 0,
                 },
                 {
-                    name: "Husk Of Opulent Dreams",
+                    name: "Husk of Opulent Dreams",
                     pieces: 2,
                     priority: 0,
                 },
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 2,
                     priority: 0,
                 },
@@ -3823,7 +3823,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/12/Zhongli-Infographic.png",
             sets: [
                 {
-                    name: "Scroll Of The Hero Of Cinder City",
+                    name: "Scroll of the Hero of Cinder City",
                     pieces: 4,
                     priority: 0,
                 },
@@ -3833,12 +3833,12 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Tenacity Of The Millelith",
+                    name: "Tenacity of the Millelith",
                     pieces: 4,
                     priority: 0,
                 },
                 {
-                    name: "Tenacity Of The Millelith",
+                    name: "Tenacity of the Millelith",
                     pieces: 2,
                     priority: 0,
                 },
@@ -3879,7 +3879,7 @@ export const builds: Partial<Builds> = {
                     comment: "Reaction Teams"
                 },
                 {
-                    name: "Scroll Of The Hero Of Cinder City",
+                    name: "Scroll of the Hero of Cinder City",
                     pieces: 4,
                     priority: 0,
                 },
@@ -3909,12 +3909,12 @@ export const builds: Partial<Builds> = {
                     priority: 1,
                 },
                 {
-                    name: "Heart Of Depth",
+                    name: "Heart of Depth",
                     pieces: 2,
                     priority: 1,
                 },
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 2,
                     priority: 2,
                 },
@@ -3937,12 +3937,12 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/11/Candace-Support-Infographic-5.1.png",
             sets: [
                 {
-                    name: "Scroll Of The Hero Of Cinder City",
+                    name: "Scroll of the Hero of Cinder City",
                     pieces: 4,
                     priority: 0,
                 },
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 4,
                     priority: 0,
                 },
@@ -3957,7 +3957,7 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 2,
                     priority: 0,
                 },
@@ -3992,7 +3992,7 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Scroll Of The Hero Of Cinder City",
+                    name: "Scroll of the Hero of Cinder City",
                     pieces: 4,
                     priority: 0,
                 },
@@ -4022,7 +4022,7 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 4,
                     priority: 0,
                 },
@@ -4057,7 +4057,7 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Tenacity Of The Millelith",
+                    name: "Tenacity of the Millelith",
                     pieces: 2,
                     priority: 0,
                 },
@@ -4082,7 +4082,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2022/11/EMC-min.png",
             sets: [
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 4,
                     priority: 0,
                 },
@@ -4127,7 +4127,7 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Husk Of Opulent Dreams",
+                    name: "Husk of Opulent Dreams",
                     pieces: 4,
                     priority: 1,
                 },
@@ -4193,7 +4193,7 @@ export const builds: Partial<Builds> = {
                     priority: 1,
                 },
                 {
-                    name: "Song Of Days Past",
+                    name: "Song of Days Past",
                     pieces: 4,
                     priority: 1,
                 },
@@ -4214,7 +4214,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/11/Ororon-Infographic-5.2.png",
             sets: [
                 {
-                    name: "Scroll Of The Hero Of Cinder City",
+                    name: "Scroll of the Hero of Cinder City",
                     pieces: 4,
                     priority: 0,
                 },
@@ -4234,7 +4234,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/09/Kujou_Sara_5.0_-_cote__euphorysm.png",
             sets: [
                 {
-                    name: "Emblem Of Severed Fate",
+                    name: "Emblem of Severed Fate",
                     pieces: 4,
                     priority: 0,
                     comment: "Damage"
@@ -4246,7 +4246,7 @@ export const builds: Partial<Builds> = {
                     comment: "Support"
                 },
                 {
-                    name: "Scroll Of The Hero Of Cinder City",
+                    name: "Scroll of the Hero of Cinder City",
                     pieces: 4,
                     priority: 0,
                     comment: "Support"
@@ -4285,7 +4285,7 @@ export const builds: Partial<Builds> = {
             infographic: "N/A",
             sets: [
                 {
-                    name: "Scroll Of The Hero Of Cinder City",
+                    name: "Scroll of the Hero of Cinder City",
                     pieces: 4,
                     priority: 0,
                 },
@@ -4305,7 +4305,7 @@ export const builds: Partial<Builds> = {
             infographic: "N/A",
             sets: [
                 {
-                    name: "Scroll Of The Hero Of Cinder City",
+                    name: "Scroll of the Hero of Cinder City",
                     pieces: 4,
                     priority: 0,
                 },

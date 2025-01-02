@@ -3,33 +3,33 @@
 import ArchaicPetra from '/public/icons/artifacts/Archaic Petra.png';
 import BlizzardStrayer from '/public/icons/artifacts/Blizzard Strayer.png';
 import BloodstainedChivalry from '/public/icons/artifacts/Bloodstained Chivalry.png';
-import CrimsonWitchOfFlames from '/public/icons/artifacts/Crimson Witch Of Flames.png';
+import CrimsonWitchofFlames from '/public/icons/artifacts/Crimson Witch of Flames.png';
 import DeepwoodMemories from '/public/icons/artifacts/Deepwood Memories.png';
 import DesertPavilionChronicle from '/public/icons/artifacts/Desert Pavilion Chronicle.png';
-import EchoesOfAnOffering from '/public/icons/artifacts/Echoes Of An Offering.png';
-import EmblemOfSeveredFate from '/public/icons/artifacts/Emblem Of Severed Fate.png';
-import FlowerOfParadiseLost from '/public/icons/artifacts/Flower Of Paradise Lost.png';
-import FragmentOfHarmonicWhimsy from '/public/icons/artifacts/Fragment Of Harmonic Whimsy.png';
+import EchoesofanOffering from '/public/icons/artifacts/Echoes of an Offering.png';
+import EmblemofSeveredFate from '/public/icons/artifacts/Emblem of Severed Fate.png';
+import FlowerofParadiseLost from '/public/icons/artifacts/Flower of Paradise Lost.png';
+import FragmentofHarmonicWhimsy from '/public/icons/artifacts/Fragment of Harmonic Whimsy.png';
 import GildedDreams from '/public/icons/artifacts/Gilded Dreams.png';
 import GladiatorsFinale from '/public/icons/artifacts/Gladiator\'s Finale.png';
 import GoldenTroupe from '/public/icons/artifacts/Golden Troupe.png';
-import HeartOfDepth from '/public/icons/artifacts/Heart Of Depth.png';
-import HuskOfOpulentDreams from '/public/icons/artifacts/Husk Of Opulent Dreams.png';
-import Instructor from '/public/icons/artifacts/Instructor.webp';
+import HeartofDepth from '/public/icons/artifacts/Heart of Depth.png';
+import HuskofOpulentDreams from '/public/icons/artifacts/Husk of Opulent Dreams.png';
+import Instructor from '/public/icons/artifacts/Instructor.png';
 import Lavawalker from '/public/icons/artifacts/Lavawalker.png';
 import MaidenBeloved from '/public/icons/artifacts/Maiden Beloved.png';
 import MarechausseeHunter from '/public/icons/artifacts/Marechaussee Hunter.png';
-import NighttimeWhispersInTheEchoingWoods from '/public/icons/artifacts/Nighttime Whispers In The Echoing Woods.png';
+import NighttimeWhispersintheEchoingWoods from '/public/icons/artifacts/Nighttime Whispers in the Echoing Woods.png';
 import NoblesseOblige from '/public/icons/artifacts/Noblesse Oblige.png';
 import NymphsDream from '/public/icons/artifacts/Nymph\'s Dream.png';
 import ObsidianCodex from '/public/icons/artifacts/Obsidian Codex.png';
 import OceanHuedClam from '/public/icons/artifacts/Ocean-Hued Clam.png';
 import PaleFlame from '/public/icons/artifacts/Pale Flame.png';
 import RetracingBolide from '/public/icons/artifacts/Retracing Bolide.png';
-import ScrollOfTheHeroOfCinderCity from '/public/icons/artifacts/Scroll Of The Hero Of Cinder City.png';
+import ScrolloftheHeroofCinderCity from '/public/icons/artifacts/Scroll of the Hero of Cinder City.png';
 import ShimenawasReminiscence from '/public/icons/artifacts/Shimenawa\'s Reminiscence.png';
-import SongOfDaysPast from '/public/icons/artifacts/Song Of Days Past.png';
-import TenacityOfTheMillelith from '/public/icons/artifacts/Tenacity Of The Millelith.png';
+import SongofDaysPast from '/public/icons/artifacts/Song of Days Past.png';
+import TenacityoftheMillelith from '/public/icons/artifacts/Tenacity of the Millelith.png';
 import TheExile from '/public/icons/artifacts/The Exile.png';
 import ThunderingFury from '/public/icons/artifacts/Thundering Fury.png';
 import Thundersoother from '/public/icons/artifacts/Thundersoother.png';
@@ -42,33 +42,33 @@ export const artifacts = {
   ['Archaic Petra']: ArchaicPetra,
   ['Blizzard Strayer']: BlizzardStrayer,
   ['Bloodstained Chivalry']: BloodstainedChivalry,
-  ['Crimson Witch Of Flames']: CrimsonWitchOfFlames,
+  ['Crimson Witch of Flames']: CrimsonWitchofFlames,
   ['Deepwood Memories']: DeepwoodMemories,
   ['Desert Pavilion Chronicle']: DesertPavilionChronicle,
-  ['Echoes Of An Offering']: EchoesOfAnOffering,
-  ['Emblem Of Severed Fate']: EmblemOfSeveredFate,
-  ['Flower Of Paradise Lost']: FlowerOfParadiseLost,
-  ['Fragment Of Harmonic Whimsy']: FragmentOfHarmonicWhimsy,
+  ['Echoes of an Offering']: EchoesofanOffering,
+  ['Emblem of Severed Fate']: EmblemofSeveredFate,
+  ['Flower of Paradise Lost']: FlowerofParadiseLost,
+  ['Fragment of Harmonic Whimsy']: FragmentofHarmonicWhimsy,
   ['Gilded Dreams']: GildedDreams,
   ['Gladiator\'s Finale']: GladiatorsFinale,
   ['Golden Troupe']: GoldenTroupe,
-  ['Heart Of Depth']: HeartOfDepth,
-  ['Husk Of Opulent Dreams']: HuskOfOpulentDreams,
+  ['Heart of Depth']: HeartofDepth,
+  ['Husk of Opulent Dreams']: HuskofOpulentDreams,
   ['Instructor']: Instructor,
   ['Lavawalker']: Lavawalker,
   ['Maiden Beloved']: MaidenBeloved,
   ['Marechaussee Hunter']: MarechausseeHunter,
-  ['Nighttime Whispers In The Echoing Woods']: NighttimeWhispersInTheEchoingWoods,
+  ['Nighttime Whispers in the Echoing Woods']: NighttimeWhispersintheEchoingWoods,
   ['Noblesse Oblige']: NoblesseOblige,
   ['Nymph\'s Dream']: NymphsDream,
   ['Obsidian Codex']: ObsidianCodex,
   ['Ocean-Hued Clam']: OceanHuedClam,
   ['Pale Flame']: PaleFlame,
   ['Retracing Bolide']: RetracingBolide,
-  ['Scroll Of The Hero Of Cinder City']: ScrollOfTheHeroOfCinderCity,
+  ['Scroll of the Hero of Cinder City']: ScrolloftheHeroofCinderCity,
   ['Shimenawa\'s Reminiscence']: ShimenawasReminiscence,
-  ['Song Of Days Past']: SongOfDaysPast,
-  ['Tenacity Of The Millelith']: TenacityOfTheMillelith,
+  ['Song of Days Past']: SongofDaysPast,
+  ['Tenacity of the Millelith']: TenacityoftheMillelith,
   ['The Exile']: TheExile,
   ['Thundering Fury']: ThunderingFury,
   ['Thundersoother']: Thundersoother,
