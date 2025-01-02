@@ -11,6 +11,13 @@ export type Build = {
         goblet: Stat[];
         circlet: Stat[];
     };
+    primaryStat: StatName;
+    erRequirement: {
+        comment?: string;
+        min: number;
+        max: number;
+        reduction?: boolean;
+    }[];
     subStats: Stat[];
 }
 
@@ -24,7 +31,19 @@ export type BuildArtifactSet = {
 
 export type BuildSpecificSet = Omit<Build, "sets"> & { set: BuildArtifactSet };
 
-export type Stat = "ATK%" | "DEF%" | "HP%" | "Heal%" | "CRIT" | "CRate" | "CDMG" | "EM" | "ER" | "Anemo%" | "Cryo%" | "Dendro%" | "Electro%" | "Geo%" | "Hydro%" | "Pyro%" | "Physical%";
+export type Stat = {
+    name: StatName;
+    priority: number;
+    comment?: string;
+    min?: number;
+    max?: number;
+}
+
+export const elements = ["Pyro%", "Hydro%", "Electro%", "Cryo%", "Anemo%", "Geo%", "Dendro%", "Physical%"] as const;
+export const realStatNames = ["CRate", "CDMG", "Heal%", "ATK%", "HP%", "DEF%", "EM", "ER", ...elements] as const
+export const statNames = ["Any", "CRIT", "Element%", ...realStatNames] as const;
+export const statOrder = Object.fromEntries(statNames.map((name, i) => [name, i])) as Record<StatName, number>;
+export type StatName = typeof statNames[number];
 
 export type Builds = { [character in Character]: Build[] };
 

@@ -22,7 +22,7 @@ export default function Home() {
         const filtered = entries.map(([set, builds]) =>
             [set, builds.filter(b => selectedCharacters.includes(b.character))]);
         setFilteredArtifacts(Object.fromEntries(filtered));
-    }, [selectedCharacters, artifacts]);
+    }, [selectedCharacters]);
 
     useEffect(() => {
         localStorage.setItem("selectedCharacters", JSON.stringify(selectedCharacters));

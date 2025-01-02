@@ -42,17 +42,17 @@ const ArtifactBuilds: React.FC<ArtifactBuildsProps> = ({ artifactName, character
             <h3>Main Stats</h3>
             <div className={styles.main_stats}>
                 <div><Image src={SandsIcon} alt="Sands" width="32" height="32" />
-                    {sandsStats.join(" | ")}
+                    {sandsStats}
                 </div>
                 <div><Image src={GobletIcon} alt="Goblet" width="32" height="32" />
-                    {gobletStats.join(" | ")}
+                    {gobletStats}
                 </div>
                 <div><Image src={CircletIcon} alt="Circlet" width="32" height="32" />
-                    {circletStats.join(" | ")}
+                    {circletStats}
                 </div>
             </div>
             <h3>Substats</h3>
-            <div>{subStats.join(" | ")}</div>
+            <div>{subStats}</div>
         </div>
     );
 };
