@@ -2,7 +2,6 @@ import { elements, realStatNames, Stat, StatName, statOrder } from "./data";
 import { mapObject } from "./util";
 
 export function formatStats(input: Stat[]): string {
-    debugger;
     let stats = aggregateStats(input);
     let byPriority = Object.groupBy(stats, stat => stat.priority);
     let grouped = Object.keys(byPriority).sort((a, b) => Number(a) - Number(b)).map(Number).map(priority => byPriority[priority]!);

@@ -30,7 +30,8 @@ const ArtifactBuilds: React.FC<ArtifactBuildsProps> = ({ artifactName, character
                     src={artifactIcons[artifactName]}
                     alt={artifactName}
                     width={128}
-                    height={128} />
+                    height={128}
+                />
                 <h2>{artifactName}</h2>
             </div>
             <div>
@@ -40,15 +41,9 @@ const ArtifactBuilds: React.FC<ArtifactBuildsProps> = ({ artifactName, character
             </div>
             <h3>Main Stats</h3>
             <div className={styles.main_stats}>
-                <div><Image src={SandsIcon} alt="Sands" width="32" height="32" />
-                    {sandsStats}
-                </div>
-                <div><Image src={GobletIcon} alt="Goblet" width="32" height="32" />
-                    {gobletStats}
-                </div>
-                <div><Image src={CircletIcon} alt="Circlet" width="32" height="32" />
-                    {circletStats}
-                </div>
+                <div><Image src={SandsIcon} alt="Sands" width="32" height="32" /> {sandsStats}</div>
+                <div><Image src={GobletIcon} alt="Goblet" width="32" height="32" /> {gobletStats}</div>
+                <div><Image src={CircletIcon} alt="Circlet" width="32" height="32" /> {circletStats}</div>
             </div>
             <h3>Substats</h3>
             <div>{subStats}</div>
