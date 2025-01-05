@@ -14,8 +14,8 @@ export default function Home() {
 
     // == Selected Characters ==
 
-    const [selectedCharacters, setSelectedCharacters] = React.useState<Character[]>(allCharacters);
-    const [filteredArtifacts, setFilteredArtifacts] = React.useState(artifacts);
+    const [selectedCharacters, setSelectedCharacters] = React.useState([] as Character[]);
+    const [filteredArtifacts, setFilteredArtifacts] = React.useState({} as BuildsByArtifact);
 
     // Load selected characters
     useEffect(() => {

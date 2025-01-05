@@ -4264,7 +4264,7 @@ export const builds: Partial<Builds> = {
         {
             playstyle: "On Field DPS",
             patch: "5.2",
-            infographic: "N/A",
+            infographic: "/",
             sets: [
                 {
                     name: "Obsidian Codex",
@@ -4282,7 +4282,7 @@ export const builds: Partial<Builds> = {
         {
             playstyle: "Off-Field DPS",
             patch: "5.2",
-            infographic: "N/A",
+            infographic: "/",
             sets: [
                 {
                     name: "Scroll of the Hero of Cinder City",
@@ -4302,7 +4302,7 @@ export const builds: Partial<Builds> = {
         {
             playstyle: "Support",
             patch: "5.2",
-            infographic: "N/A",
+            infographic: "/",
             sets: [
                 {
                     name: "Scroll of the Hero of Cinder City",

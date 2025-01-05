@@ -47,12 +47,10 @@ export type StatName = typeof statNames[number];
 
 export type Builds = { [character in Character]: Build[] };
 
-export type BuildsByArtifact = {
-    [artifact in ArtifactSet]: {
-        character: Character,
-        build: BuildSpecificSet
-    }[]
-};
+export type BuildsByArtifact = Record<ArtifactSet, {
+    character: Character,
+    build: BuildSpecificSet
+}[]>
 
 export function groupByArtifact(builds: Partial<Builds>): BuildsByArtifact {
     const result: BuildsByArtifact = {} as BuildsByArtifact;
