@@ -337,7 +337,7 @@ export const builds: Partial<Builds> = {
                     priority: 1,
                 },
                 {
-                    name: "Echoes of An Offering",
+                    name: "Echoes of an Offering",
                     pieces: 4,
                     priority: 2,
                     comment: "<100 Ping"
@@ -393,7 +393,7 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Echoes of An Offering",
+                    name: "Echoes of an Offering",
                     pieces: 4,
                     priority: 0,
                 },
@@ -2413,7 +2413,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2023/12/Navia_4.6_update_-_euphorysm.png",
             sets: [
                 {
-                    name: "Nighttime Whispers In the Echoing Woods",
+                    name: "Nighttime Whispers in the Echoing Woods",
                     pieces: 4,
                     priority: 0,
                 },
@@ -2523,7 +2523,7 @@ export const builds: Partial<Builds> = {
             infographic: "https://keqingmains.com/wp-content/uploads/2024/11/Ningguang-Infographic-5.2.png",
             sets: [
                 {
-                    name: "Nighttime Whispers In the Echoing Woods",
+                    name: "Nighttime Whispers in the Echoing Woods",
                     pieces: 4,
                     priority: 0,
                 },
@@ -3751,7 +3751,7 @@ export const builds: Partial<Builds> = {
                     priority: 0,
                 },
                 {
-                    name: "Echoes of An Offering",
+                    name: "Echoes of an Offering",
                     pieces: 4,
                     priority: 0,
                 },
