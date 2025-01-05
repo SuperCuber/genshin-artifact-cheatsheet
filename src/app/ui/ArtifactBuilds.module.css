@@ -12,11 +12,6 @@
     margin-bottom: 1rem;
 }
 
-.character_ions {
-    display: flex;
-    align-items: center;
-}
-
 .artifact_builds h3 {
     margin-top: 12px;
 }

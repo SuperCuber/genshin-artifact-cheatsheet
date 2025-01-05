@@ -14,7 +14,6 @@ interface ArtifactBuildsProps {
 }
 
 const ArtifactBuilds: React.FC<ArtifactBuildsProps> = ({ artifactName, characterBuilds }) => {
-    // TODO: add null state (and maybe shove to bottom of the list)
     // TODO: support highlighting later
     const sandsStats = formatStats(characterBuilds.flatMap(cb => cb.build.mainStats.sands));
     const gobletStats = formatStats(characterBuilds.flatMap(cb => cb.build.mainStats.goblet));
@@ -34,7 +33,7 @@ const ArtifactBuilds: React.FC<ArtifactBuildsProps> = ({ artifactName, character
                     height={128} />
                 <h2>{artifactName}</h2>
             </div>
-            <div className={styles.character_icons}>
+            <div>
                 {Object.entries(characterIcons).map(([character, builds]) => (
                     <CharacterBuildIcon key={character} character={character as Character} builds={builds.map(b => b.build)} />
                 ))}

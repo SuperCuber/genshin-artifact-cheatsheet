@@ -9,7 +9,6 @@ interface CharacterFilterIconProps {
     onClick: () => void;
 }
 
-// TODO: multiple playstyles of the same character and set need to go into the same icon. accept build[]
 const CharacterFilterIcon: React.FC<CharacterFilterIconProps> = ({ character, selected, onClick }) => {
     return (
         <Image
