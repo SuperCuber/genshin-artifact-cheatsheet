@@ -14,7 +14,7 @@ export default function Home() {
 
     // == Selected Characters ==
 
-    const [selectedCharacters, setSelectedCharacters] = React.useState<Character[]>([]);
+    const [selectedCharacters, setSelectedCharacters] = React.useState<Character[]>(allCharacters);
     const [filteredArtifacts, setFilteredArtifacts] = React.useState(artifacts);
 
     // Load selected characters
@@ -59,7 +59,7 @@ export default function Home() {
         let filtered = mapObject(artifacts, (_, builds) =>
             builds.filter(b => selectedCharacters.includes(b.character))) as BuildsByArtifact;
 
-        if (textSearch) {
+        if (textSearch !== undefined && textSearch !== "") {
             filtered = mapObject(filtered, (artifact, builds) =>
                 artifact.toLowerCase().includes(textSearch.toLowerCase())
                     ? builds
@@ -88,20 +88,25 @@ export default function Home() {
                             characterBuilds={characterBuilds}
                         />
                     ))}
+                {Object.entries(filteredArtifacts).flatMap(([_, builds]) => builds).length == 0 &&
+                    <h2>No results :(</h2>}
             </div>
             <div className={styles.filtered_sets}>
                 <h2>Sets with no corresponding characters</h2>
-                {Object.entries(filteredArtifacts).filter(([_, builds]) => builds.length == 0).map(
-                    ([artifactName, _]) => (
-                        <div key={artifactName} className={styles.filtered_set}>
-                            <Image src={artifactIcons[artifactName as ArtifactSet]}
-                                alt={artifactName}
-                                width={64}
-                                height={64}
-                            />
-                            {artifactName}
-                        </div>
-                    ))}
+                {Object.entries(filteredArtifacts)
+                    .filter(([_, builds]) => builds.length == 0)
+                    .filter(([artifactName, _]) => artifactName.toLowerCase().includes(textSearch?.toLowerCase() || ""))
+                    .map(
+                        ([artifactName, _]) => (
+                            <div key={artifactName} className={styles.filtered_set}>
+                                <Image src={artifactIcons[artifactName as ArtifactSet]}
+                                    alt={artifactName}
+                                    width={64}
+                                    height={64}
+                                />
+                                {artifactName}
+                            </div>
+                        ))}
             </div>
         </main>
     );
