@@ -31,8 +31,8 @@ const CharacterFilter: React.FC<CharacterFilterProps> = ({ selectedCharacters, s
         <div className={styles.character_filter}>
             <div className={styles.top_row}>
                 <input
-                    type="text"
-                    placeholder="Search..."
+                    type="search"
+                    placeholder="Search Character..."
                     className={styles.character_filter_search}
                     value={search}
                     onChange={e => setSearch(e.target.value)}

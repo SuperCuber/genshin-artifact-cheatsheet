@@ -1,0 +1,11 @@
+.search_bar {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+
+    display: flex;
+}
+
+.search_field {
+    font-size: 1.5em;
+}

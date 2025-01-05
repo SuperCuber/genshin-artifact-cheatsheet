@@ -47,7 +47,7 @@ export type StatName = typeof statNames[number];
 
 export type Builds = { [character in Character]: Build[] };
 
-type BuildsByArtifact = {
+export type BuildsByArtifact = {
     [artifact in ArtifactSet]: {
         character: Character,
         build: BuildSpecificSet

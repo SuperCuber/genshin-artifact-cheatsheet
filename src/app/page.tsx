@@ -1,37 +1,81 @@
 "use client";
 
 import styles from "./page.module.css";
-import { allCharacters, artifactIcons, ArtifactSet, builds, Character, groupByArtifact } from "./lib/data";
+import { allCharacters, artifactIcons, ArtifactSet, builds, BuildsByArtifact, Character, groupByArtifact } from "./lib/data";
 import ArtifactBuilds from "./ui/ArtifactBuilds";
 import React, { useEffect } from "react";
 import CharacterFilter from "./ui/CharacterFilter";
 import Image from "next/image";
+import SearchBar from "./ui/SearchBar";
+import { mapObject } from "./lib/util";
 
 export default function Home() {
     const artifacts = groupByArtifact(builds);
 
+    // == Selected Characters ==
+
     const [selectedCharacters, setSelectedCharacters] = React.useState<Character[]>([]);
     const [filteredArtifacts, setFilteredArtifacts] = React.useState(artifacts);
 
+    // Load selected characters
     useEffect(() => {
         // Using localStorage -> must be in useEffect
         setSelectedCharacters(JSON.parse(localStorage.getItem("selectedCharacters") || "null") || allCharacters)
     }, []);
 
-    useEffect(() => {
-        const entries = Object.entries(artifacts);
-        const filtered = entries.map(([set, builds]) =>
-            [set, builds.filter(b => selectedCharacters.includes(b.character))]);
-        setFilteredArtifacts(Object.fromEntries(filtered));
-    }, [selectedCharacters]);
-
+    // Save selected characters
     useEffect(() => {
         localStorage.setItem("selectedCharacters", JSON.stringify(selectedCharacters));
     }, [selectedCharacters]);
 
+    // == Search Bar ==
+
+    const [textSearch, setTextSearch] = React.useState<string>();
+    const searchInputRef = React.useRef<HTMLInputElement | null>(null);
+
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === "f" && e.ctrlKey) {
+                e.preventDefault();
+                // Needed to prevent "stale closure problem"
+                setTextSearch((prevTextSearch) => {
+                    if (prevTextSearch === undefined) {
+                        return "";
+                    }
+                    return prevTextSearch;
+                });
+                setTimeout(() => searchInputRef.current?.focus(), 0);
+            }
+        }
+        window.addEventListener("keydown", handleKeyDown)
+
+        return () => {
+            window.removeEventListener("keydown", handleKeyDown)
+        }
+    }, []);
+
+    // Filter artifacts based on selected characters and search bar
+    useEffect(() => {
+        let filtered = mapObject(artifacts, (_, builds) =>
+            builds.filter(b => selectedCharacters.includes(b.character))) as BuildsByArtifact;
+
+        if (textSearch) {
+            filtered = mapObject(filtered, (artifact, builds) =>
+                artifact.toLowerCase().includes(textSearch.toLowerCase())
+                    ? builds
+                    : builds.filter(b => b.character.toLowerCase().includes(textSearch.toLowerCase()))
+            ) as BuildsByArtifact;
+        }
+
+
+        setFilteredArtifacts(filtered);
+    }, [selectedCharacters, textSearch]);
+
     return (
         <main className={styles.main}>
             <h1>Genshin Impact Artifact Cheatsheet</h1>
+            {textSearch !== undefined &&
+                <SearchBar textFilter={textSearch} setTextFilter={setTextSearch} inputRef={searchInputRef} />}
             <div className={styles.filters}>
                 <CharacterFilter selectedCharacters={selectedCharacters} setSelectedCharacters={setSelectedCharacters} />
             </div>
