@@ -9,10 +9,9 @@ interface CharacterBuildIconProps {
 }
 
 const CharacterBuildIcon: React.FC<CharacterBuildIconProps> = ({ character, builds }) => {
-    builds = builds.filter((build, i) => builds.findIndex(b => b.infographic === build.infographic) === i);
+    const uniqueBuilds = React.useMemo(() => builds.filter((build, i) => builds.findIndex(b => b.infographic === build.infographic) === i), [builds]);
 
     const dialogRef = React.useRef<HTMLDialogElement>(null);
-
     const dialogOnClick = (e: React.MouseEvent) => {
         if (e.target === dialogRef.current) {
             let rect = (e.target as HTMLDialogElement).getBoundingClientRect();
@@ -26,7 +25,7 @@ const CharacterBuildIcon: React.FC<CharacterBuildIconProps> = ({ character, buil
             onClick={() => dialogRef.current?.showModal()}
         />
         <dialog className={styles.character_build_popup} ref={dialogRef} onClick={dialogOnClick}>
-            {builds.filter(b => b.infographic != "").map((build, i) => (
+            {uniqueBuilds.filter(b => b.infographic != "").map((build, i) => (
                 <Image key={i} src={build.infographic} alt={build.playstyle} width={1150} height={920} />
             ))}
         </dialog>
