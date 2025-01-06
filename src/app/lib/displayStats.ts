@@ -10,8 +10,6 @@ export function formatStats(input: Stat[]): string {
 }
 
 function aggregateStats(stats: Stat[]): Stat[] {
-    // TODO: remove once build data fixed
-    stats = stats.map(stat => ({ name: stat as unknown as string as StatName, priority: stat as unknown as string == "ATK%" ? 1 : 0 }));
     // 1. Split stats
     const split = stats.flatMap(splitStat);
     // 2. Make map of StatName to priority

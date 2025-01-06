@@ -1,7 +1,9 @@
-import { Builds } from "./_builds";
+import { Character } from ".";
+import { mapObject } from "../util";
+import { BuildOld, Builds, convertOldBuild } from "./_builds";
 
 // TODO: remove Partial once we have all characters
-export const builds: Partial<Builds> = {
+const buildsOld: Partial<Record<Character, BuildOld[]>> = {
     Albedo: [
         {
             playstyle: "Off-Field DPS",
@@ -4319,3 +4321,5 @@ export const builds: Partial<Builds> = {
         }
     ]
 }
+
+export const builds = mapObject(buildsOld, (_, builds) => builds.map(convertOldBuild)) as Builds

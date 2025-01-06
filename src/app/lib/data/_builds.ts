@@ -21,6 +21,52 @@ export type Build = {
     subStats: Stat[];
 }
 
+// TODO: remove
+export type BuildOld = {
+    playstyle: string;
+    infographic: string;
+    patch: string;
+    niche?: boolean;
+    sets: BuildArtifactSet[];
+    mainStats: {
+        sands: Stat[] | StatName[];
+        goblet: Stat[] | StatName[];
+        circlet: Stat[] | StatName[];
+    };
+    primaryStat?: StatName;
+    erRequirement?: {
+        comment?: string;
+        min: number;
+        max: number;
+        reduction?: boolean;
+    }[];
+    subStats: StatName[];
+}
+
+export function convertOldBuild(old: BuildOld): Build {
+    function convertStat(stat: StatName | Stat): Stat {
+        if (typeof stat === "string") {
+            return {
+                name: stat,
+                priority: ["CRate", "CDMG", "CRIT"].includes(stat) ? 0 : stat.includes("%") ? 1 : 2,
+            };
+        } else {
+            return stat;
+        }
+    }
+    return {
+        ...old,
+        mainStats: {
+            sands: old.mainStats.sands.map(convertStat),
+            goblet: old.mainStats.goblet.map(convertStat),
+            circlet: old.mainStats.circlet.map(convertStat),
+        },
+        primaryStat: old.primaryStat ?? "Any",
+        erRequirement: old.erRequirement ?? [],
+        subStats: old.subStats.map(convertStat),
+    };
+}
+
 export type BuildArtifactSet = {
     name: ArtifactSet;
     pieces: 2 | 4;
@@ -45,7 +91,7 @@ export const statNames = ["Any", "CRIT", "Element%", ...realStatNames] as const;
 export const statOrder = Object.fromEntries(statNames.map((name, i) => [name, i])) as Record<StatName, number>;
 export type StatName = typeof statNames[number];
 
-export type Builds = { [character in Character]: Build[] };
+export type Builds = Record<Character, Build[]>;
 
 export type BuildsByArtifact = Record<ArtifactSet, {
     character: Character,

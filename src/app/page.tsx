@@ -68,7 +68,8 @@ export default function Home() {
         }
 
         setFilteredArtifacts(filtered);
-    // eslint-disable-next-line react-hooks/exhaustive-deps // `artifacts` is not a real dependency, and adding it breaks things
+    // `artifacts` is not a real dependency, and adding it breaks things
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selectedCharacters, textSearch]);
 
     return (
