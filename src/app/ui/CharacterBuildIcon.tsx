@@ -14,7 +14,7 @@ const CharacterBuildIcon: React.FC<CharacterBuildIconProps> = ({ character, buil
     const dialogRef = React.useRef<HTMLDialogElement>(null);
     const dialogOnClick = (e: React.MouseEvent) => {
         if (e.target === dialogRef.current) {
-            let rect = (e.target as HTMLDialogElement).getBoundingClientRect();
+            const rect = (e.target as HTMLDialogElement).getBoundingClientRect();
             if (e.clientY < rect.top || e.clientY > rect.bottom) return dialogRef.current?.close();
             if (e.clientX < rect.left || e.clientX > rect.right) return dialogRef.current?.close();
         }
