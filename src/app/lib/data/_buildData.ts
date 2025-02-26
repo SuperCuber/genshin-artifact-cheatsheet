@@ -1,9 +1,8 @@
 import { Character } from ".";
-import { mapObject } from "../util";
-import { BuildOld, Builds, convertOldBuild } from "./_builds";
+import { Build, } from "./_builds";
 
 // TODO: remove Partial once we have all characters
-const buildsOld: Partial<Record<Character, BuildOld[]>> = {
+export const builds: Partial<Record<Character, Build[]>> = {
     Albedo: [
         {
             playstyle: "Off-Field DPS",
@@ -37,11 +36,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["DEF%"],
-                goblet: ["Geo%"],
-                circlet: ["CRIT"]
+                sands: [{name:"DEF%", priority:0}],
+                goblet: [{name:"Geo%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "DEF%", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"DEF%", priority:0}, {name:"ATK%", priority:0}]
         }
     ],
     Alhaitham: [
@@ -78,11 +77,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["EM", "ATK%"],
-                goblet: ["Dendro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"EM", priority:0}, {name:"ATK%", priority:0}],
+                goblet: [{name:"Dendro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "EM", "CRIT"]
+            subStats: [{name:"ER", priority:0}, {name:"EM", priority:0}, {name:"CRIT", priority:0}]
         }
     ],
     Aloy: [
@@ -98,11 +97,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 }
             ],
             mainStats: {
-                sands: ["ATK%"],
-                goblet: ["Cryo%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}],
+                goblet: [{name:"Cryo%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}]
         },
         {
             playstyle: "Quickswap Melt DPS",
@@ -141,11 +140,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%", "EM", "ER"],
-                goblet: ["Cryo%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}, {name:"EM", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"Cryo%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%", "EM"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}, {name:"EM", priority:0}]
         },
         {
             playstyle: "Off-Field Support",
@@ -164,11 +163,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ER", "ATK%"],
-                goblet: ["Cryo%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ER", priority:0}, {name:"ATK%", priority:0}],
+                goblet: [{name:"Cryo%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}]
         }
     ],
     Amber: [
@@ -199,11 +198,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["EM"],
-                goblet: ["EM"],
-                circlet: ["EM"]
+                sands: [{name:"EM", priority:0}],
+                goblet: [{name:"EM", priority:0}],
+                circlet: [{name:"EM", priority:0}]
             },
-            subStats: ["EM"]
+            subStats: [{name:"EM", priority:0}]
         },
         {
             playstyle: "Melt Bunny Bomber DPS (C4+)",
@@ -237,11 +236,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["EM", "ATK%"],
-                goblet: ["Pyro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"EM", priority:0}, {name:"ATK%", priority:0}],
+                goblet: [{name:"Pyro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "EM", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"EM", priority:0}, {name:"ATK%", priority:0}]
         },
         {
             playstyle: "Melt Charged Shot DPS",
@@ -275,11 +274,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["EM", "ATK%"],
-                goblet: ["Pyro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"EM", priority:0}, {name:"ATK%", priority:0}],
+                goblet: [{name:"Pyro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["CRIT", "EM", "ATK%"]
+            subStats: [{name:"CRIT", priority:0}, {name:"EM", priority:0}, {name:"ATK%", priority:0}]
         }
     ],
     "Anemo Traveler": [
@@ -315,11 +314,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["EM", "ATK%"],
-                goblet: ["EM", "Anemo%"],
-                circlet: ["EM", "CRIT"]
+                sands: [{name:"EM", priority:0}, {name:"ATK%", priority:0}],
+                goblet: [{name:"EM", priority:0}, {name:"Anemo%", priority:0}],
+                circlet: [{name:"EM", priority:0}, {name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "EM", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"EM", priority:0}, {name:"ATK%", priority:0}]
         }
     ],
     Arlecchino: [
@@ -346,11 +345,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%", "EM"],
-                goblet: ["Pyro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}, {name:"EM", priority:0}],
+                goblet: [{name:"Pyro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["CRIT", "ATK%", "EM"]
+            subStats: [{name:"CRIT", priority:0}, {name:"ATK%", priority:0}, {name:"EM", priority:0}]
         }
     ],
     "Kamisato Ayaka": [
@@ -366,11 +365,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%"],
-                goblet: ["Cryo%"],
-                circlet: ["CDMG", "ATK%"]
+                sands: [{name:"ATK%", priority:0}],
+                goblet: [{name:"Cryo%", priority:0}],
+                circlet: [{name:"CDMG", priority:0}, {name:"ATK%", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}]
         }
     ],
     "Kamisato Ayato": [
@@ -407,11 +406,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%", "ER"],
-                goblet: ["Hydro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"Hydro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%", "HP%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}, {name:"HP%", priority:0}]
         }
     ],
     Baizhu: [
@@ -442,11 +441,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["HP%", "ER"],
-                goblet: ["HP%"],
-                circlet: ["HP%", "Heal%"]
+                sands: [{name:"HP%", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"HP%", priority:0}],
+                circlet: [{name:"HP%", priority:0}, {name:"Heal%", priority:0}]
             },
-            subStats: ["ER", "HP%", "CRate"]
+            subStats: [{name:"ER", priority:0}, {name:"HP%", priority:0}, {name:"CRate", priority:0}]
         }
     ],
     Barbara: [
@@ -477,11 +476,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["HP%", "EM"],
-                goblet: ["HP%", "EM"],
-                circlet: ["Heal%", "HP%", "CRate"]
+                sands: [{name:"HP%", priority:0}, {name:"EM", priority:0}],
+                goblet: [{name:"HP%", priority:0}, {name:"EM", priority:0}],
+                circlet: [{name:"Heal%", priority:0}, {name:"HP%", priority:0}, {name:"CRate", priority:0}]
             },
-            subStats: ["HP%", "CRate", "EM"]
+            subStats: [{name:"HP%", priority:0}, {name:"CRate", priority:0}, {name:"EM", priority:0}]
         }
     ],
     Beidou: [
@@ -522,11 +521,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%", "ER"],
-                goblet: ["Electro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"Electro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%", "EM"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}, {name:"EM", priority:0}]
         }
     ],
     Charlotte: [
@@ -557,11 +556,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ER", "ATK%"],
-                goblet: ["ATK%"],
-                circlet: ["Heal%", "CRate"]
+                sands: [{name:"ER", priority:0}, {name:"ATK%", priority:0}],
+                goblet: [{name:"ATK%", priority:0}],
+                circlet: [{name:"Heal%", priority:0}, {name:"CRate", priority:0}]
             },
-            subStats: ["ER", "CRate", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRate", priority:0}, {name:"ATK%", priority:0}]
         }
     ],
     Chasca: [
@@ -583,11 +582,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%", "EM"],
-                goblet: ["ATK%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}, {name:"EM", priority:0}],
+                goblet: [{name:"ATK%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["CRIT", "ATK%", "EM"]
+            subStats: [{name:"CRIT", priority:0}, {name:"ATK%", priority:0}, {name:"EM", priority:0}]
         }
     ],
     Chevreuse: [
@@ -633,11 +632,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%", "ER"],
-                goblet: ["Pyro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"Pyro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%", "HP%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}, {name:"HP%", priority:0}]
         },
         {
             playstyle: "Support",
@@ -676,11 +675,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["HP%", "ER"],
-                goblet: ["HP%"],
-                circlet: ["HP%", "Heal%"]
+                sands: [{name:"HP%", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"HP%", priority:0}],
+                circlet: [{name:"HP%", priority:0}, {name:"Heal%", priority:0}]
             },
-            subStats: ["ER", "HP%", "CRate"]
+            subStats: [{name:"ER", priority:0}, {name:"HP%", priority:0}, {name:"CRate", priority:0}]
         }
     ],
     Chiori: [
@@ -716,11 +715,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["DEF%"],
-                goblet: ["Geo%", "DEF%"],
-                circlet: ["CRIT", "DEF%"]
+                sands: [{name:"DEF%", priority:0}],
+                goblet: [{name:"Geo%", priority:0}, {name:"DEF%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}, {name:"DEF%", priority:0}]
             },
-            subStats: ["CRIT", "DEF%", "ATK%"]
+            subStats: [{name:"CRIT", priority:0}, {name:"DEF%", priority:0}, {name:"ATK%", priority:0}]
         }
     ],
     Chongyun: [
@@ -766,11 +765,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%", "EM"],
-                goblet: ["Cryo%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}, {name:"EM", priority:0}],
+                goblet: [{name:"Cryo%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%", "EM"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}, {name:"EM", priority:0}]
         }
     ],
     Clorinde: [
@@ -796,11 +795,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%", "EM"],
-                goblet: ["Electro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}, {name:"EM", priority:0}],
+                goblet: [{name:"Electro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["CRIT", "ATK%", "EM"]
+            subStats: [{name:"CRIT", priority:0}, {name:"ATK%", priority:0}, {name:"EM", priority:0}]
         }
     ],
     Cyno: [
@@ -831,11 +830,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["EM", "ATK%", "ER"],
-                goblet: ["Electro%", "EM"],
-                circlet: ["CRIT", "EM"]
+                sands: [{name:"EM", priority:0}, {name:"ATK%", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"Electro%", priority:0}, {name:"EM", priority:0}],
+                circlet: [{name:"CRIT", priority:0}, {name:"EM", priority:0}]
             },
-            subStats: ["ER", "CRIT", "EM", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"EM", priority:0}, {name:"ATK%", priority:0}]
         }
     ],
     Dehya: [
@@ -871,11 +870,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["EM"],
-                goblet: ["EM"],
-                circlet: ["EM"]
+                sands: [{name:"EM", priority:0}],
+                goblet: [{name:"EM", priority:0}],
+                circlet: [{name:"EM", priority:0}]
             },
-            subStats: ["EM", "HP%"]
+            subStats: [{name:"EM", priority:0}, {name:"HP%", priority:0}]
         },
         {
             playstyle: "On-Field DPS",
@@ -900,11 +899,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%", "HP%", "ER"],
-                goblet: ["Pyro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}, {name:"HP%", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"Pyro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%", "HP%", "EM"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}, {name:"HP%", priority:0}, {name:"EM", priority:0}]
         },
         {
             playstyle: "Off-Field Support",
@@ -928,11 +927,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["HP%"],
-                goblet: ["HP%"],
-                circlet: ["HP%", "CRate"]
+                sands: [{name:"HP%", priority:0}],
+                goblet: [{name:"HP%", priority:0}],
+                circlet: [{name:"HP%", priority:0}, {name:"CRate", priority:0}]
             },
-            subStats: ["CRate", "HP%"]
+            subStats: [{name:"CRate", priority:0}, {name:"HP%", priority:0}]
         }
     ],
     Diluc: [
@@ -959,11 +958,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%", "EM"],
-                goblet: ["Pyro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}, {name:"EM", priority:0}],
+                goblet: [{name:"Pyro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "EM", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"EM", priority:0}, {name:"ATK%", priority:0}]
         }
     ],
     Dori: [
@@ -1010,11 +1009,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["EM", "ER"],
-                goblet: ["Electro%", "EM"],
-                circlet: ["CRIT"]
+                sands: [{name:"EM", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"Electro%", priority:0}, {name:"EM", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "EM", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"EM", priority:0}, {name:"ATK%", priority:0}]
         },
         {
             playstyle: "Hyperbloom Trigger",
@@ -1038,11 +1037,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["EM", "ER"],
-                goblet: ["EM"],
-                circlet: ["EM"]
+                sands: [{name:"EM", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"EM", priority:0}],
+                circlet: [{name:"EM", priority:0}]
             },
-            subStats: ["ER", "EM", "CRate", "HP%"]
+            subStats: [{name:"ER", priority:0}, {name:"EM", priority:0}, {name:"CRate", priority:0}, {name:"HP%", priority:0}]
         },
         {
             playstyle: "Off-Field Support",
@@ -1086,11 +1085,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["HP%"],
-                goblet: ["HP%"],
-                circlet: ["HP%"]
+                sands: [{name:"HP%", priority:0}],
+                goblet: [{name:"HP%", priority:0}],
+                circlet: [{name:"HP%", priority:0}]
             },
-            subStats: ["ER", "HP%"]
+            subStats: [{name:"ER", priority:0}, {name:"HP%", priority:0}]
         }
     ],
     Emilie: [
@@ -1111,11 +1110,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%"],
-                goblet: ["Dendro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}],
+                goblet: [{name:"Dendro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["CRIT", "ATK%", "ER"]
+            subStats: [{name:"CRIT", priority:0}, {name:"ATK%", priority:0}, {name:"ER", priority:0}]
         }
     ],
     Eula: [
@@ -1157,11 +1156,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%"],
-                goblet: ["Physical%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}],
+                goblet: [{name:"Physical%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}]
         }
     ],
     Faruzan: [
@@ -1192,11 +1191,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ER"],
-                goblet: ["Anemo%"],
-                circlet: ["CRate"]
+                sands: [{name:"ER", priority:0}],
+                goblet: [{name:"Anemo%", priority:0}],
+                circlet: [{name:"CRate", priority:0}]
             },
-            subStats: ["ER", "CRate"]
+            subStats: [{name:"ER", priority:0}, {name:"CRate", priority:0}]
         }
     ],
     Fischl: [
@@ -1212,11 +1211,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%", "EM"],
-                goblet: ["Electro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}, {name:"EM", priority:0}],
+                goblet: [{name:"Electro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%", "EM"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}, {name:"EM", priority:0}]
         }
     ],
     Freminet: [
@@ -1252,11 +1251,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%", "ER"],
-                goblet: ["Cryo%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"Cryo%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}]
         },
         {
             playstyle: "Physical On-Field DPS",
@@ -1290,11 +1289,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%", "EM"],
-                goblet: ["Physical%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}, {name:"EM", priority:0}],
+                goblet: [{name:"Physical%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}]
         }
     ],
     Furina: [
@@ -1315,11 +1314,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["HP%", "ER"],
-                goblet: ["HP%", "Hydro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"HP%", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"HP%", priority:0}, {name:"Hydro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "HP%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"HP%", priority:0}]
         }
     ],
     Gaming: [
@@ -1345,11 +1344,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["EM", "ATK%"],
-                goblet: ["Pyro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"EM", priority:0}, {name:"ATK%", priority:0}],
+                goblet: [{name:"Pyro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "EM", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"EM", priority:0}, {name:"ATK%", priority:0}]
         }
     ],
     Ganyu: [
@@ -1365,11 +1364,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%"],
-                goblet: ["Cryo%"],
-                circlet: ["CDMG", "ATK%"]
+                sands: [{name:"ATK%", priority:0}],
+                goblet: [{name:"Cryo%", priority:0}],
+                circlet: [{name:"CDMG", priority:0}, {name:"ATK%", priority:0}]
             },
-            subStats: ["ER", "CDMG", "ATK%", "CRate"]
+            subStats: [{name:"ER", priority:0}, {name:"CDMG", priority:0}, {name:"ATK%", priority:0}, {name:"CRate", priority:0}]
         },
         {
             playstyle: "On-Field Melt DPS",
@@ -1404,11 +1403,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["EM", "ATK%"],
-                goblet: ["Cryo%"],
-                circlet: ["CRIT"]
+                sands: [{name:"EM", priority:0}, {name:"ATK%", priority:0}],
+                goblet: [{name:"Cryo%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["EM", "CRIT", "EM", "ATK%"]
+            subStats: [{name:"EM", priority:0}, {name:"CRIT", priority:0}, {name:"EM", priority:0}, {name:"ATK%", priority:0}]
         }
     ],
     Heizou: [
@@ -1455,11 +1454,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%"],
-                goblet: ["Anemo%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}],
+                goblet: [{name:"Anemo%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%", "EM"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}, {name:"EM", priority:0}]
         },
         {
             playstyle: "On-Field Driver",
@@ -1473,11 +1472,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["EM"],
-                goblet: ["EM"],
-                circlet: ["EM"]
+                sands: [{name:"EM", priority:0}],
+                goblet: [{name:"EM", priority:0}],
+                circlet: [{name:"EM", priority:0}]
             },
-            subStats: ["ER", "EM"]
+            subStats: [{name:"ER", priority:0}, {name:"EM", priority:0}]
         },
         {
             playstyle: "Off-Field Support",
@@ -1491,11 +1490,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ER", "ATK%", "EM"],
-                goblet: ["Anemo%", "EM"],
-                circlet: ["CRIT", "EM"]
+                sands: [{name:"ER", priority:0}, {name:"ATK%", priority:0}, {name:"EM", priority:0}],
+                goblet: [{name:"Anemo%", priority:0}, {name:"EM", priority:0}],
+                circlet: [{name:"CRIT", priority:0}, {name:"EM", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%", "EM"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}, {name:"EM", priority:0}]
         }
     ],
     "Hu Tao": [
@@ -1527,11 +1526,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["HP%", "EM"],
-                goblet: ["Pyro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"HP%", priority:0}, {name:"EM", priority:0}],
+                goblet: [{name:"Pyro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["EM", "CRIT", "HP%"]
+            subStats: [{name:"EM", priority:0}, {name:"CRIT", priority:0}, {name:"HP%", priority:0}]
         }
     ],
     "Hydro Traveler": [
@@ -1562,11 +1561,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ER", "ATK%"],
-                goblet: ["Hydro%"],
-                circlet: ["CRate", "CDMG"]
+                sands: [{name:"ER", priority:0}, {name:"ATK%", priority:0}],
+                goblet: [{name:"Hydro%", priority:0}],
+                circlet: [{name:"CRate", priority:0}, {name:"CDMG", priority:0}]
             },
-            subStats: ["ER", "CRate", "CDMG", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRate", priority:0}, {name:"CDMG", priority:0}, {name:"ATK%", priority:0}]
         }
     ],
     "Arataki Itto": [
@@ -1597,11 +1596,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["DEF%"],
-                goblet: ["Geo%"],
-                circlet: ["CRIT"]
+                sands: [{name:"DEF%", priority:0}],
+                goblet: [{name:"Geo%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "DEF%", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"DEF%", priority:0}, {name:"ATK%", priority:0}]
         }
     ],
     Jean: [
@@ -1617,11 +1616,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["EM", "ER"],
-                goblet: ["EM"],
-                circlet: ["EM"]
+                sands: [{name:"EM", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"EM", priority:0}],
+                circlet: [{name:"EM", priority:0}]
             },
-            subStats: ["ER", "EM", "CRate"]
+            subStats: [{name:"ER", priority:0}, {name:"EM", priority:0}, {name:"CRate", priority:0}]
         },
         {
             playstyle: "Off-Field Healer | Support",
@@ -1645,11 +1644,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ER", "ATK%"],
-                goblet: ["ATK%", "Anemo%"],
-                circlet: ["Heal%", "CRate"]
+                sands: [{name:"ER", priority:0}, {name:"ATK%", priority:0}],
+                goblet: [{name:"ATK%", priority:0}, {name:"Anemo%", priority:0}],
+                circlet: [{name:"Heal%", priority:0}, {name:"CRate", priority:0}]
             },
-            subStats: ["ER", "ATK%", "CRate", "EM"]
+            subStats: [{name:"ER", priority:0}, {name:"ATK%", priority:0}, {name:"CRate", priority:0}, {name:"EM", priority:0}]
         }
     ],
     Kachina: [
@@ -1665,11 +1664,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["DEF%", "ER"],
-                goblet: ["Geo%"],
-                circlet: ["CRIT"]
+                sands: [{name:"DEF%", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"Geo%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "DEF%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"DEF%", priority:0}]
         }
     ],
     Kaeya: [
@@ -1700,11 +1699,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%"],
-                goblet: ["Cryo%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}],
+                goblet: [{name:"Cryo%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "ATK%", "CRIT"]
+            subStats: [{name:"ER", priority:0}, {name:"ATK%", priority:0}, {name:"CRIT", priority:0}]
         },
         {
             playstyle: "Quickswap DPS - Reverse Melt",
@@ -1733,11 +1732,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%", "EM", "ER"],
-                goblet: ["Cryo%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}, {name:"EM", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"Cryo%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%", "EM"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}, {name:"EM", priority:0}]
         }
     ],
     Kaveh: [
@@ -1763,11 +1762,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ER", "ER"],
-                goblet: ["EM"],
-                circlet: ["EM", "CRate", "Heal%"]
+                sands: [{name:"ER", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"EM", priority:0}],
+                circlet: [{name:"EM", priority:0}, {name:"CRate", priority:0}, {name:"Heal%", priority:0}]
             },
-            subStats: ["ER", "CRate", "EM"]
+            subStats: [{name:"ER", priority:0}, {name:"CRate", priority:0}, {name:"EM", priority:0}]
         }
     ],
     "Kaedehara Kazuha": [
@@ -1783,11 +1782,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["EM", "ER"],
-                goblet: ["EM"],
-                circlet: ["EM"]
+                sands: [{name:"EM", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"EM", priority:0}],
+                circlet: [{name:"EM", priority:0}]
             },
-            subStats: ["ER", "EM", "CRate"]
+            subStats: [{name:"ER", priority:0}, {name:"EM", priority:0}, {name:"CRate", priority:0}]
         }
     ],
     Keqing: [
@@ -1825,11 +1824,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%", "EM"],
-                goblet: ["Electro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}, {name:"EM", priority:0}],
+                goblet: [{name:"Electro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["CRIT", "ATK%"]
+            subStats: [{name:"CRIT", priority:0}, {name:"ATK%", priority:0}]
         }
     ],
     Kinich: [
@@ -1850,11 +1849,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%"],
-                goblet: ["Dendro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}],
+                goblet: [{name:"Dendro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["CRIT", "ATK%", "ER"]
+            subStats: [{name:"CRIT", priority:0}, {name:"ATK%", priority:0}, {name:"ER", priority:0}]
         }
     ],
     Kirara: [
@@ -1890,11 +1889,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["HP%", "ER"],
-                goblet: ["HP%"],
-                circlet: ["HP%", "CRate"]
+                sands: [{name:"HP%", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"HP%", priority:0}],
+                circlet: [{name:"HP%", priority:0}, {name:"CRate", priority:0}]
             },
-            subStats: ["ER", "HP%", "CRate"]
+            subStats: [{name:"ER", priority:0}, {name:"HP%", priority:0}, {name:"CRate", priority:0}]
         }
     ],
     Klee: [
@@ -1930,11 +1929,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["EM"],
-                goblet: ["EM"],
-                circlet: ["EM"]
+                sands: [{name:"EM", priority:0}],
+                goblet: [{name:"EM", priority:0}],
+                circlet: [{name:"EM", priority:0}]
             },
-            subStats: ["EM"]
+            subStats: [{name:"EM", priority:0}]
         },
         {
             playstyle: "On-Field DPS",
@@ -1963,11 +1962,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%"],
-                goblet: ["Pyro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}],
+                goblet: [{name:"Pyro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}]
         }
     ],
     "Sangonomiya Kokomi": [
@@ -2003,11 +2002,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["EM", "HP%", "ER"],
-                goblet: ["EM", "Hydro%"],
-                circlet: ["EM", "Heal%"]
+                sands: [{name:"EM", priority:0}, {name:"HP%", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"EM", priority:0}, {name:"Hydro%", priority:0}],
+                circlet: [{name:"EM", priority:0}, {name:"Heal%", priority:0}]
             },
-            subStats: ["ER", "HP%", "EM"]
+            subStats: [{name:"ER", priority:0}, {name:"HP%", priority:0}, {name:"EM", priority:0}]
         },
         {
             playstyle: "Off-Field Support",
@@ -2036,11 +2035,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["HP%"],
-                goblet: ["HP%"],
-                circlet: ["Heal%", "HP%"]
+                sands: [{name:"HP%", priority:0}],
+                goblet: [{name:"HP%", priority:0}],
+                circlet: [{name:"Heal%", priority:0}, {name:"HP%", priority:0}]
             },
-            subStats: ["HP%"]
+            subStats: [{name:"HP%", priority:0}]
         },
         {
             playstyle: "On-Field Driver",
@@ -2054,11 +2053,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["HP%", "ER"],
-                goblet: ["Hydro%"],
-                circlet: ["Heal%"]
+                sands: [{name:"HP%", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"Hydro%", priority:0}],
+                circlet: [{name:"Heal%", priority:0}]
             },
-            subStats: ["ER", "HP%", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"HP%", priority:0}, {name:"ATK%", priority:0}]
         }
     ],
     Layla: [
@@ -2094,11 +2093,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["HP%", "ER"],
-                goblet: ["Cryo%"],
-                circlet: ["CRIT", "HP%"]
+                sands: [{name:"HP%", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"Cryo%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}, {name:"HP%", priority:0}]
             },
-            subStats: ["ER", "CRIT", "HP%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"HP%", priority:0}]
         },
         {
             playstyle: "Shielder",
@@ -2117,11 +2116,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["HP%", "ER"],
-                goblet: ["HP%"],
-                circlet: ["HP%", "CRate"]
+                sands: [{name:"HP%", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"HP%", priority:0}],
+                circlet: [{name:"HP%", priority:0}, {name:"CRate", priority:0}]
             },
-            subStats: ["ER", "CRate", "HP%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRate", priority:0}, {name:"HP%", priority:0}]
         }
     ],
     Lisa: [
@@ -2163,11 +2162,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ER", "ATK%", "EM"],
-                goblet: ["Electro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ER", priority:0}, {name:"ATK%", priority:0}, {name:"EM", priority:0}],
+                goblet: [{name:"Electro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%", "EM"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}, {name:"EM", priority:0}]
         },
         {
             playstyle: "On-Field DPS",
@@ -2201,11 +2200,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%", "EM"],
-                goblet: ["Electro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}, {name:"EM", priority:0}],
+                goblet: [{name:"Electro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%", "EM"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}, {name:"EM", priority:0}]
         }
     ],
     Lynette: [
@@ -2228,11 +2227,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%"],
-                goblet: ["Anemo%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}],
+                goblet: [{name:"Anemo%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%", "EM"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}, {name:"EM", priority:0}]
         },
         {
             playstyle: "Support | Reaction DPS",
@@ -2246,11 +2245,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ER", "EM"],
-                goblet: ["EM"],
-                circlet: ["EM"]
+                sands: [{name:"ER", priority:0}, {name:"EM", priority:0}],
+                goblet: [{name:"EM", priority:0}],
+                circlet: [{name:"EM", priority:0}]
             },
-            subStats: ["ER", "EM", "CRate"]
+            subStats: [{name:"ER", priority:0}, {name:"EM", priority:0}, {name:"CRate", priority:0}]
         },
         {
             playstyle: "Off-Field Support | DPS",
@@ -2276,11 +2275,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ER", "ATK%"],
-                goblet: ["Anemo%", "ATK%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ER", priority:0}, {name:"ATK%", priority:0}],
+                goblet: [{name:"Anemo%", priority:0}, {name:"ATK%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%", "EM"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}, {name:"EM", priority:0}]
         }
     ],
     Lyney: [
@@ -2316,11 +2315,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%", "EM"],
-                goblet: ["Pyro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}, {name:"EM", priority:0}],
+                goblet: [{name:"Pyro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["CRIT", "ATK%", "EM", "ER"]
+            subStats: [{name:"CRIT", priority:0}, {name:"ATK%", priority:0}, {name:"EM", priority:0}, {name:"ER", priority:0}]
         }
     ],
     Mona: [
@@ -2341,11 +2340,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ER"],
-                goblet: ["Hydro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ER", priority:0}],
+                goblet: [{name:"Hydro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRate", "CDMG"]
+            subStats: [{name:"ER", priority:0}, {name:"CRate", priority:0}, {name:"CDMG", priority:0}]
         }
     ],
     Mualani: [
@@ -2361,11 +2360,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["HP%", "EM"],
-                goblet: ["Hydro%", "HP%"],
-                circlet: ["CRIT", "HP%"]
+                sands: [{name:"HP%", priority:0}, {name:"EM", priority:0}],
+                goblet: [{name:"Hydro%", priority:0}, {name:"HP%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}, {name:"HP%", priority:0}]
             },
-            subStats: ["CRIT", "HP%", "EM", "ER"]
+            subStats: [{name:"CRIT", priority:0}, {name:"HP%", priority:0}, {name:"EM", priority:0}, {name:"ER", priority:0}]
         }
     ],
     Nahida: [
@@ -2401,11 +2400,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["EM"],
-                goblet: ["EM", "Dendro%"],
-                circlet: ["EM", "CRIT"]
+                sands: [{name:"EM", priority:0}],
+                goblet: [{name:"EM", priority:0}, {name:"Dendro%", priority:0}],
+                circlet: [{name:"EM", priority:0}, {name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "EM", "CRIT", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"EM", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}]
         }
     ],
     Navia: [
@@ -2451,11 +2450,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%", "ER"],
-                goblet: ["Geo%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"Geo%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}]
         }
     ],
     Neuvilette: [
@@ -2471,11 +2470,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["HP%"],
-                goblet: ["Hydro%", "HP%"],
-                circlet: ["CRIT", "HP%"]
+                sands: [{name:"HP%", priority:0}],
+                goblet: [{name:"Hydro%", priority:0}, {name:"HP%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}, {name:"HP%", priority:0}]
             },
-            subStats: ["ER", "CRIT", "HP%", "EM"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"HP%", priority:0}, {name:"EM", priority:0}]
         }
     ],
     Nilou: [
@@ -2511,11 +2510,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["HP%"],
-                goblet: ["HP%"],
-                circlet: ["HP%"]
+                sands: [{name:"HP%", priority:0}],
+                goblet: [{name:"HP%", priority:0}],
+                circlet: [{name:"HP%", priority:0}]
             },
-            subStats: ["HP%", "EM"]
+            subStats: [{name:"HP%", priority:0}, {name:"EM", priority:0}]
         }
     ],
     Ningguang: [
@@ -2551,11 +2550,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%"],
-                goblet: ["Geo%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}],
+                goblet: [{name:"Geo%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}]
         }
     ],
     Noelle: [
@@ -2582,11 +2581,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["DEF%"],
-                goblet: ["Geo%"],
-                circlet: ["CRIT"]
+                sands: [{name:"DEF%", priority:0}],
+                goblet: [{name:"Geo%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "DEF%", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"DEF%", priority:0}, {name:"ATK%", priority:0}]
         }
     ],
     Qiqi: [
@@ -2602,11 +2601,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%"],
-                goblet: ["ATK%", "Physical%"],
-                circlet: ["Heal%", "CRIT"]
+                sands: [{name:"ATK%", priority:0}],
+                goblet: [{name:"ATK%", priority:0}, {name:"Physical%", priority:0}],
+                circlet: [{name:"Heal%", priority:0}, {name:"CRIT", priority:0}]
             },
-            subStats: ["ATK%", "CRIT", "ER"]
+            subStats: [{name:"ATK%", priority:0}, {name:"CRIT", priority:0}, {name:"ER", priority:0}]
         }
     ],
     "Raiden Shogun": [
@@ -2633,11 +2632,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ER", "ATK%", "EM"],
-                goblet: ["Electro%", "ATK%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ER", priority:0}, {name:"ATK%", priority:0}, {name:"EM", priority:0}],
+                goblet: [{name:"Electro%", priority:0}, {name:"ATK%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%", "EM"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}, {name:"EM", priority:0}]
         },
         {
             playstyle: "Off-Field Hyperbloom Trigger",
@@ -2672,11 +2671,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
 
             ],
             mainStats: {
-                sands: ["EM"],
-                goblet: ["EM"],
-                circlet: ["EM"]
+                sands: [{name:"EM", priority:0}],
+                goblet: [{name:"EM", priority:0}],
+                circlet: [{name:"EM", priority:0}]
             },
-            subStats: ["EM", "CRate"]
+            subStats: [{name:"EM", priority:0}, {name:"CRate", priority:0}]
         },
         {
             playstyle: "On-Field DPS",
@@ -2695,11 +2694,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%", "ER"],
-                goblet: ["Electro%", "ATK%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"Electro%", priority:0}, {name:"ATK%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}]
         }
     ],
     Razor: [
@@ -2730,11 +2729,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%", "EM"],
-                goblet: ["Electro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}, {name:"EM", priority:0}],
+                goblet: [{name:"Electro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "EM", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"EM", priority:0}, {name:"ATK%", priority:0}]
         },
         {
             playstyle: "On-Field Physical DPS",
@@ -2764,11 +2763,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%"],
-                goblet: ["Physical%", "ATK%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}],
+                goblet: [{name:"Physical%", priority:0}, {name:"ATK%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", 'ATK%']
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}]
         },
         {
             playstyle: "Transformative Reaction DPS",
@@ -2802,11 +2801,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["EM", "ER"],
-                goblet: ["EM"],
-                circlet: ["EM"]
+                sands: [{name:"EM", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"EM", priority:0}],
+                circlet: [{name:"EM", priority:0}]
             },
-            subStats: ["ER", "EM", "CRate"]
+            subStats: [{name:"ER", priority:0}, {name:"EM", priority:0}, {name:"CRate", priority:0}]
         }
     ],
     Rosaria: [
@@ -2828,11 +2827,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%", "ER"],
-                goblet: ["Cryo%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"Cryo%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}]
         },
         {
             playstyle: "Reverse Melt DPS",
@@ -2871,11 +2870,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["EM", "ATK%"],
-                goblet: ["Cryo%"],
-                circlet: ["CRIT"]
+                sands: [{name:"EM", priority:0}, {name:"ATK%", priority:0}],
+                goblet: [{name:"Cryo%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "EM", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"EM", priority:0}, {name:"ATK%", priority:0}]
         }
     ],
     Sayu: [
@@ -2901,11 +2900,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ER", "ATK%", "EM"],
-                goblet: ["ATK%", "EM"],
-                circlet: ["Heal%", "EM", "CRIT"]
+                sands: [{name:"ER", priority:0}, {name:"ATK%", priority:0}, {name:"EM", priority:0}],
+                goblet: [{name:"ATK%", priority:0}, {name:"EM", priority:0}],
+                circlet: [{name:"Heal%", priority:0}, {name:"EM", priority:0}, {name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "ATK%", "EM", "CRate"]
+            subStats: [{name:"ER", priority:0}, {name:"ATK%", priority:0}, {name:"EM", priority:0}, {name:"CRate", priority:0}]
         },
         {
             playstyle: "On-Field Driver",
@@ -2919,11 +2918,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["EM", "ATK%"],
-                goblet: ["EM", "Anemo%"],
-                circlet: ["EM", "CRIT"]
+                sands: [{name:"EM", priority:0}, {name:"ATK%", priority:0}],
+                goblet: [{name:"EM", priority:0}, {name:"Anemo%", priority:0}],
+                circlet: [{name:"EM", priority:0}, {name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "EM", "CRIT", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"EM", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}]
         }
     ],
     Sethos: [
@@ -2964,11 +2963,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["EM", "ER"],
-                goblet: ["Electro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"EM", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"Electro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "EM", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"EM", priority:0}, {name:"ATK%", priority:0}]
         }
     ],
     "Kuki Shinobu": [
@@ -3004,11 +3003,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["EM"],
-                goblet: ["EM"],
-                circlet: ["EM"]
+                sands: [{name:"EM", priority:0}],
+                goblet: [{name:"EM", priority:0}],
+                circlet: [{name:"EM", priority:0}]
             },
-            subStats: ["EM", "ER", "HP%"]
+            subStats: [{name:"EM", priority:0}, {name:"ER", priority:0}, {name:"HP%", priority:0}]
         },
         {
             playstyle: "Quicken Support",
@@ -3037,11 +3036,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["EM"],
-                goblet: ["Electro%", "EM", "HP%"],
-                circlet: ["CRIT", "Heal%"]
+                sands: [{name:"EM", priority:0}],
+                goblet: [{name:"Electro%", priority:0}, {name:"EM", priority:0}, {name:"HP%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}, {name:"Heal%", priority:0}]
             },
-            subStats: ["ER", "CRIT", "EM", "HP%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"EM", priority:0}, {name:"HP%", priority:0}]
         }
     ],
     Sigewinne: [
@@ -3067,11 +3066,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["HP%", "ER"],
-                goblet: ["HP%", "Hydro%"],
-                circlet: ["HP%", "CRIT"]
+                sands: [{name:"HP%", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"HP%", priority:0}, {name:"Hydro%", priority:0}],
+                circlet: [{name:"HP%", priority:0}, {name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "HP%", "CRIT"]
+            subStats: [{name:"ER", priority:0}, {name:"HP%", priority:0}, {name:"CRIT", priority:0}]
         }
     ],
     Sucrose: [
@@ -3087,11 +3086,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["EM", "ER"],
-                goblet: ["EM"],
-                circlet: ["EM"]
+                sands: [{name:"EM", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"EM", priority:0}],
+                circlet: [{name:"EM", priority:0}]
             },
-            subStats: ["ER", "EM"]
+            subStats: [{name:"ER", priority:0}, {name:"EM", priority:0}]
         }
     ],
     Tartaglia: [
@@ -3132,11 +3131,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%"],
-                goblet: ["Hydro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}],
+                goblet: [{name:"Hydro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%", "EM"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}, {name:"EM", priority:0}]
         }
     ],
     Thoma: [
@@ -3167,11 +3166,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ER", "EM", "HP%"],
-                goblet: ["EM", "HP%"],
-                circlet: ["EM", "HP%"]
+                sands: [{name:"ER", priority:0}, {name:"EM", priority:0}, {name:"HP%", priority:0}],
+                goblet: [{name:"EM", priority:0}, {name:"HP%", priority:0}],
+                circlet: [{name:"EM", priority:0}, {name:"HP%", priority:0}]
             },
-            subStats: ["ER", "EM", "HP%", "CRate"]
+            subStats: [{name:"ER", priority:0}, {name:"EM", priority:0}, {name:"HP%", priority:0}, {name:"CRate", priority:0}]
         },
         {
             playstyle: "Off-Field Support",
@@ -3200,11 +3199,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ER", "HP%"],
-                goblet: ["HP%"],
-                circlet: ["HP%", "CRate"]
+                sands: [{name:"ER", priority:0}, {name:"HP%", priority:0}],
+                goblet: [{name:"HP%", priority:0}],
+                circlet: [{name:"HP%", priority:0}, {name:"CRate", priority:0}]
             },
-            subStats: ["ER", "CRate", "HP%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRate", priority:0}, {name:"HP%", priority:0}]
         }
     ],
     Tighnari: [
@@ -3245,11 +3244,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%", "EM"],
-                goblet: ["Dendro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}, {name:"EM", priority:0}],
+                goblet: [{name:"Dendro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%", "EM"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}, {name:"EM", priority:0}]
         }
     ],
     Venti: [
@@ -3265,11 +3264,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["EM", "ATK%"],
-                goblet: ["EM", "Anemo%"],
-                circlet: ["EM", "CRIT"]
+                sands: [{name:"EM", priority:0}, {name:"ATK%", priority:0}],
+                goblet: [{name:"EM", priority:0}, {name:"Anemo%", priority:0}],
+                circlet: [{name:"EM", priority:0}, {name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "EM", "CRIT", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"EM", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}]
         }
     ],
     Wanderer: [
@@ -3296,11 +3295,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%"],
-                goblet: ["Anemo%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}],
+                goblet: [{name:"Anemo%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["CRIT", "ATK%", "ER"]
+            subStats: [{name:"CRIT", priority:0}, {name:"ATK%", priority:0}, {name:"ER", priority:0}]
         }
     ],
     Wriothesley: [
@@ -3326,11 +3325,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%"],
-                goblet: ["Cryo%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}],
+                goblet: [{name:"Cryo%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["CRIT", "ATK%", "ER"]
+            subStats: [{name:"CRIT", priority:0}, {name:"ATK%", priority:0}, {name:"ER", priority:0}]
         },
         {
             playstyle: "Melt DPS",
@@ -3354,11 +3353,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%", "EM"],
-                goblet: ["Cryo%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}, {name:"EM", priority:0}],
+                goblet: [{name:"Cryo%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["CRIT", "EM", "ATK%", "ER"]
+            subStats: [{name:"CRIT", priority:0}, {name:"EM", priority:0}, {name:"ATK%", priority:0}, {name:"ER", priority:0}]
         }
     ],
     Xiangling: [
@@ -3386,11 +3385,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ER", "ATK%", "EM"],
-                goblet: ["Pyro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ER", priority:0}, {name:"ATK%", priority:0}, {name:"EM", priority:0}],
+                goblet: [{name:"Pyro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%", "EM"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}, {name:"EM", priority:0}]
         }
     ],
     Xianyun: [
@@ -3421,11 +3420,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ER", "ATK%"],
-                goblet: ["ATK%"],
-                circlet: ["ATK%"]
+                sands: [{name:"ER", priority:0}, {name:"ATK%", priority:0}],
+                goblet: [{name:"ATK%", priority:0}],
+                circlet: [{name:"ATK%", priority:0}]
             },
-            subStats: ["ER", "ATK%", "CRate"]
+            subStats: [{name:"ER", priority:0}, {name:"ATK%", priority:0}, {name:"CRate", priority:0}]
         }
     ],
     Xiao: [
@@ -3468,11 +3467,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%"],
-                goblet: ["Anemo%", "ATK%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}],
+                goblet: [{name:"Anemo%", priority:0}, {name:"ATK%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}]
         }
     ],
     Xilonen: [
@@ -3488,11 +3487,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["DEF%", "ER"],
-                goblet: ["DEF%"],
-                circlet: ["DEF%", "Heal%", "CRate"]
+                sands: [{name:"DEF%", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"DEF%", priority:0}],
+                circlet: [{name:"DEF%", priority:0}, {name:"Heal%", priority:0}, {name:"CRate", priority:0}]
             },
-            subStats: ["ER", "CRate", "DEF%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRate", priority:0}, {name:"DEF%", priority:0}]
         }
     ],
     Xinyan: [
@@ -3544,11 +3543,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%", "ER", "DEF%"],
-                goblet: ["Physical%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}, {name:"ER", priority:0}, {name:"DEF%", priority:0}],
+                goblet: [{name:"Physical%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%", "DEF%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}, {name:"DEF%", priority:0}]
         },
         {
             playstyle: "Pyro DPS",
@@ -3584,11 +3583,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%"],
-                goblet: ["Pyro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}],
+                goblet: [{name:"Pyro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}]
         },
         {
             playstyle: "Off-Field Shielder",
@@ -3617,11 +3616,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["DEF%", "ER"],
-                goblet: ["DEF%"],
-                circlet: ["DEF%"]
+                sands: [{name:"DEF%", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"DEF%", priority:0}],
+                circlet: [{name:"DEF%", priority:0}]
             },
-            subStats: ["ER", "DEF%", "CRate"]
+            subStats: [{name:"ER", priority:0}, {name:"DEF%", priority:0}, {name:"CRate", priority:0}]
         }
     ],
     "Yae Miko": [
@@ -3663,11 +3662,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%", "EM"],
-                goblet: ["Electro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}, {name:"EM", priority:0}],
+                goblet: [{name:"Electro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%", "EM"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}, {name:"EM", priority:0}]
         }
     ],
     Yanfei: [
@@ -3699,11 +3698,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["EM", "ATK%"],
-                goblet: ["Pyro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"EM", priority:0}, {name:"ATK%", priority:0}],
+                goblet: [{name:"Pyro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["CRIT", "EM", "ATK%"]
+            subStats: [{name:"CRIT", priority:0}, {name:"EM", priority:0}, {name:"ATK%", priority:0}]
         }
     ],
     Yaoyao: [
@@ -3734,11 +3733,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["HP%", "ER"],
-                goblet: ["HP%"],
-                circlet: ["Heal%", "HP%"]
+                sands: [{name:"HP%", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"HP%", priority:0}],
+                circlet: [{name:"Heal%", priority:0}, {name:"HP%", priority:0}]
             },
-            subStats: ["ER", "HP%", "EM"]
+            subStats: [{name:"ER", priority:0}, {name:"HP%", priority:0}, {name:"EM", priority:0}]
         }
     ],
     Yoimiya: [
@@ -3771,11 +3770,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%", "EM"],
-                goblet: ["Pyro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}, {name:"EM", priority:0}],
+                goblet: [{name:"Pyro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["CRIT", "ATK%", "EM"]
+            subStats: [{name:"CRIT", priority:0}, {name:"ATK%", priority:0}, {name:"EM", priority:0}]
         }
     ],
     "Yun Jin": [
@@ -3811,11 +3810,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["DEF%", "ER"],
-                goblet: ["DEF%"],
-                circlet: ["DEF%"]
+                sands: [{name:"DEF%", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"DEF%", priority:0}],
+                circlet: [{name:"DEF%", priority:0}]
             },
-            subStats: ["ER", "CRate", "DEF%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRate", priority:0}, {name:"DEF%", priority:0}]
         }
     ],
     Zhongli: [
@@ -3856,11 +3855,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["HP%"],
-                goblet: ["HP%"],
-                circlet: ["HP%", "CRate"]
+                sands: [{name:"HP%", priority:0}],
+                goblet: [{name:"HP%", priority:0}],
+                circlet: [{name:"HP%", priority:0}, {name:"CRate", priority:0}]
             },
-            subStats: ["CRate", "HP%"]
+            subStats: [{name:"CRate", priority:0}, {name:"HP%", priority:0}]
         }
     ],
     Bennet: [
@@ -3887,11 +3886,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ER", "HP%"],
-                goblet: ["HP%"],
-                circlet: ["Heal%", "HP%"]
+                sands: [{name:"ER", priority:0}, {name:"HP%", priority:0}],
+                goblet: [{name:"HP%", priority:0}],
+                circlet: [{name:"Heal%", priority:0}, {name:"HP%", priority:0}]
             },
-            subStats: ["ER", "HP%"]
+            subStats: [{name:"ER", priority:0}, {name:"HP%", priority:0}]
         }
     ],
     Candace: [
@@ -3927,11 +3926,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%", "ER"],
-                goblet: ["Hydro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"Hydro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%", "HP%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}, {name:"HP%", priority:0}]
         },
         {
             playstyle: "Hydro Enabler | Support",
@@ -3965,11 +3964,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["HP%", "ER"],
-                goblet: ["HP%"],
-                circlet: ["HP%", "CRIT"]
+                sands: [{name:"HP%", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"HP%", priority:0}],
+                circlet: [{name:"HP%", priority:0}, {name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRate", "CDMG"]
+            subStats: [{name:"ER", priority:0}, {name:"CRate", priority:0}, {name:"CDMG", priority:0}]
         }
     ],
     Collei: [
@@ -4000,11 +3999,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ER", "ATK%", "EM"],
-                goblet: ["Dendro%", "EM"],
-                circlet: ["CRIT", "EM"]
+                sands: [{name:"ER", priority:0}, {name:"ATK%", priority:0}, {name:"EM", priority:0}],
+                goblet: [{name:"Dendro%", priority:0}, {name:"EM", priority:0}],
+                circlet: [{name:"CRIT", priority:0}, {name:"EM", priority:0}]
             },
-            subStats: ["ER", "CRIT", "EM", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"EM", priority:0}, {name:"ATK%", priority:0}]
         }
     ],
     "Dendro Traveler": [
@@ -4040,11 +4039,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ER", "EM", "ATK%"],
-                goblet: ["Dendro%"],
-                circlet: ["CRate"]
+                sands: [{name:"ER", priority:0}, {name:"EM", priority:0}, {name:"ATK%", priority:0}],
+                goblet: [{name:"Dendro%", priority:0}],
+                circlet: [{name:"CRate", priority:0}]
             },
-            subStats: ["ER", "CRate", "EM", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRate", priority:0}, {name:"EM", priority:0}, {name:"ATK%", priority:0}]
         }
     ],
     Diona: [
@@ -4070,11 +4069,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["HP%", "ER"],
-                goblet: ["HP%"],
-                circlet: ["HP%", "Heal%", "CRate"]
+                sands: [{name:"HP%", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"HP%", priority:0}],
+                circlet: [{name:"HP%", priority:0}, {name:"Heal%", priority:0}, {name:"CRate", priority:0}]
             },
-            subStats: ["ER", "HP%", "CRate"]
+            subStats: [{name:"ER", priority:0}, {name:"HP%", priority:0}, {name:"CRate", priority:0}]
         }
     ],
     "Electro Traveler": [
@@ -4095,11 +4094,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ER"],
-                goblet: ["Electro%"],
-                circlet: ["CRate"]
+                sands: [{name:"ER", priority:0}],
+                goblet: [{name:"Electro%", priority:0}],
+                circlet: [{name:"CRate", priority:0}]
             },
-            subStats: ["ER", "CRate"]
+            subStats: [{name:"ER", priority:0}, {name:"CRate", priority:0}]
         }
     ],
     "Geo Traveler": [
@@ -4150,11 +4149,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%"],
-                goblet: ["Geo%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}],
+                goblet: [{name:"Geo%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}]
         }
     ],
     Gorou: [
@@ -4171,11 +4170,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 // the exile
             ],
             mainStats: {
-                sands: ["ER"],
+                sands: [{name:"ER", priority:0}],
                 goblet: [],
-                circlet: ["CRate"]
+                circlet: [{name:"CRate", priority:0}]
             },
-            subStats: ["ER", "CRate"]
+            subStats: [{name:"ER", priority:0}, "CRate"]
         }
     ],
     Mika: [
@@ -4202,11 +4201,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 // the exile
             ],
             mainStats: {
-                sands: ["ER", "HP%"],
-                goblet: ["HP%"],
-                circlet: ["Heal%", "CRate"]
+                sands: [{name:"ER", priority:0}, {name:"HP%", priority:0}],
+                goblet: [{name:"HP%", priority:0}],
+                circlet: [{name:"Heal%", priority:0}, {name:"CRate", priority:0}]
             },
-            subStats: ["ER", "CRate", "HP%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRate", priority:0}, {name:"HP%", priority:0}]
         }
     ],
     Ororon: [
@@ -4222,11 +4221,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%", "ER"],
-                goblet: ["Electro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}, {name:"ER", priority:0}],
+                goblet: [{name:"Electro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}]
         }
     ],
     "Kujou Sara": [
@@ -4255,11 +4254,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ER", "ATK%"],
-                goblet: ["Electro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ER", priority:0}, {name:"ATK%", priority:0}],
+                goblet: [{name:"Electro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["ER", "CRIT", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"CRIT", priority:0}, {name:"ATK%", priority:0}]
         }
     ],
     Mavuika: [
@@ -4275,11 +4274,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%"],
-                goblet: ["Pyro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}],
+                goblet: [{name:"Pyro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["CRIT", "ATK%", "EM"]
+            subStats: [{name:"CRIT", priority:0}, {name:"ATK%", priority:0}, {name:"EM", priority:0}]
         },
         {
             playstyle: "Off-Field DPS",
@@ -4293,11 +4292,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["ATK%"],
-                goblet: ["Pyro%"],
-                circlet: ["CRIT"]
+                sands: [{name:"ATK%", priority:0}],
+                goblet: [{name:"Pyro%", priority:0}],
+                circlet: [{name:"CRIT", priority:0}]
             },
-            subStats: ["CRIT", "ATK%", "EM"]
+            subStats: [{name:"CRIT", priority:0}, {name:"ATK%", priority:0}, {name:"EM", priority:0}]
         }
     ],
     Citlali: [
@@ -4313,13 +4312,11 @@ const buildsOld: Partial<Record<Character, BuildOld[]>> = {
                 },
             ],
             mainStats: {
-                sands: ["EM"],
-                goblet: ["EM"],
-                circlet: ["EM"]
+                sands: [{name:"EM", priority:0}],
+                goblet: [{name:"EM", priority:0}],
+                circlet: [{name:"EM", priority:0}]
             },
-            subStats: ["ER", "EM", "ATK%"]
+            subStats: [{name:"ER", priority:0}, {name:"EM", priority:0}, {name:"ATK%", priority:0}]
         }
     ]
 }
-
-export const builds = mapObject(buildsOld, (_, builds) => builds.map(convertOldBuild)) as Builds

@@ -43,30 +43,6 @@ export type BuildOld = {
     subStats: StatName[];
 }
 
-export function convertOldBuild(old: BuildOld): Build {
-    function convertStat(stat: StatName | Stat): Stat {
-        if (typeof stat === "string") {
-            return {
-                name: stat,
-                priority: ["CRate", "CDMG", "CRIT"].includes(stat) ? 0 : stat.includes("%") ? 1 : 2,
-            };
-        } else {
-            return stat;
-        }
-    }
-    return {
-        ...old,
-        mainStats: {
-            sands: old.mainStats.sands.map(convertStat),
-            goblet: old.mainStats.goblet.map(convertStat),
-            circlet: old.mainStats.circlet.map(convertStat),
-        },
-        primaryStat: old.primaryStat ?? "Any",
-        erRequirement: old.erRequirement ?? [],
-        subStats: old.subStats.map(convertStat),
-    };
-}
-
 export type BuildArtifactSet = {
     name: ArtifactSet;
     pieces: 2 | 4;
