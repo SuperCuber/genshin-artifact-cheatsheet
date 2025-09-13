@@ -1,4 +1,4 @@
-.main {
+.app {
   --gray-rgb: 0, 0, 0;
   --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
   --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
@@ -9,7 +9,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .main {
+  .app {
     --gray-rgb: 255, 255, 255;
     --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
     --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
@@ -19,13 +19,16 @@
   }
 }
 
-.main {
-  min-height: 100svh;
-  padding: 20px;
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.filters {
-    margin-bottom: 20px;
+.main {
+  flex: 1;
+  padding: 20px;
+  padding-top: 77px; /* Account for fixed topbar (57px) + padding */
 }
 
 .artifact_sets {

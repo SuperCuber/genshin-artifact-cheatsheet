@@ -4,10 +4,10 @@ import styles from "./page.module.css";
 import { allCharacters, artifactIcons, ArtifactSet, builds, BuildsByArtifact, Character, groupByArtifact } from "./lib/data";
 import ArtifactBuilds from "./ui/ArtifactBuilds";
 import React, { useEffect } from "react";
-import CharacterFilter from "./ui/CharacterFilter";
 import Image from "next/image";
 import SearchBar from "./ui/SearchBar";
 import { mapObject } from "./lib/util";
+import TopBar from "./ui/TopBar";
 
 export default function Home() {
     const artifacts = groupByArtifact(builds);
@@ -68,47 +68,49 @@ export default function Home() {
         }
 
         setFilteredArtifacts(filtered);
-    // `artifacts` is not a real dependency, and adding it breaks things
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // `artifacts` is not a real dependency, and adding it breaks things
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selectedCharacters, textSearch]);
 
     return (
-        <main className={styles.main}>
-            <h1>Genshin Impact Artifact Cheatsheet</h1>
-            {textSearch !== undefined &&
-                <SearchBar textFilter={textSearch} setTextFilter={setTextSearch} inputRef={searchInputRef} />}
-            <div className={styles.filters}>
-                <CharacterFilter selectedCharacters={selectedCharacters} setSelectedCharacters={setSelectedCharacters} />
-            </div>
-            <div className={styles.artifact_sets}>
-                {Object.entries(filteredArtifacts).filter(([_, builds]) => builds.length > 0).map(
-                    ([artifactName, characterBuilds]) => (
-                        <ArtifactBuilds
-                            key={artifactName}
-                            artifactName={artifactName as ArtifactSet}
-                            characterBuilds={characterBuilds}
-                        />
-                    ))}
-                {Object.entries(filteredArtifacts).flatMap(([_, builds]) => builds).length == 0 &&
-                    <h2>No results :(</h2>}
-            </div>
-            <div className={styles.filtered_sets}>
-                <h2>Sets with no corresponding characters</h2>
-                {Object.entries(filteredArtifacts)
-                    .filter(([_, builds]) => builds.length == 0)
-                    .filter(([artifactName, _]) => artifactName.toLowerCase().includes(textSearch?.toLowerCase() || ""))
-                    .map(
-                        ([artifactName, _]) => (
-                            <div key={artifactName} className={styles.filtered_set}>
-                                <Image src={artifactIcons[artifactName as ArtifactSet]}
-                                    alt={artifactName}
-                                    width={64}
-                                    height={64}
-                                />
-                                {artifactName}
-                            </div>
+        <div className={styles.app}>
+            <TopBar
+                selectedCharacters={selectedCharacters}
+                setSelectedCharacters={setSelectedCharacters}
+            />
+            <main className={styles.main}>
+                {textSearch !== undefined &&
+                    <SearchBar textFilter={textSearch} setTextFilter={setTextSearch} inputRef={searchInputRef} />}
+                <div className={styles.artifact_sets}>
+                    {Object.entries(filteredArtifacts).filter(([_, builds]) => builds.length > 0).map(
+                        ([artifactName, characterBuilds]) => (
+                            <ArtifactBuilds
+                                key={artifactName}
+                                artifactName={artifactName as ArtifactSet}
+                                characterBuilds={characterBuilds}
+                            />
                         ))}
-            </div>
-        </main>
+                    {Object.entries(filteredArtifacts).flatMap(([_, builds]) => builds).length == 0 &&
+                        <h2>No results :(</h2>}
+                </div>
+                <div className={styles.filtered_sets}>
+                    <h2>Sets with no corresponding characters</h2>
+                    {Object.entries(filteredArtifacts)
+                        .filter(([_, builds]) => builds.length == 0)
+                        .filter(([artifactName, _]) => artifactName.toLowerCase().includes(textSearch?.toLowerCase() || ""))
+                        .map(
+                            ([artifactName, _]) => (
+                                <div key={artifactName} className={styles.filtered_set}>
+                                    <Image src={artifactIcons[artifactName as ArtifactSet]}
+                                        alt={artifactName}
+                                        width={64}
+                                        height={64}
+                                    />
+                                    {artifactName}
+                                </div>
+                            ))}
+                </div>
+            </main>
+        </div>
     );
 }
