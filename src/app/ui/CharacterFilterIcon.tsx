@@ -11,14 +11,17 @@ interface CharacterFilterIconProps {
 
 const CharacterFilterIcon: React.FC<CharacterFilterIconProps> = ({ character, selected, onClick }) => {
     return (
-        <Image
-            src={characterIcons[character]}
-            alt={character}
-            width={64}
-            height={64}
+        <div 
             onClick={onClick}
-            className={selected ? styles.selected : styles.deselected }
-        />
+            className={`${styles.character_icon} ${selected ? styles.selected : styles.deselected}`}
+        >
+            <Image
+                src={characterIcons[character]}
+                alt={character}
+                width={64}
+                height={64}
+            />
+        </div>
     );
 };
 

@@ -1,7 +1,8 @@
 .search_bar {
     position: fixed;
-    top: 16px;
+    top: 88px; /* ~53px topbar height + 35px margin for better spacing */
     right: 16px;
+    z-index: 1001; /* Above topbar */
 
     display: flex;
 }
